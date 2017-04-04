@@ -1,7 +1,8 @@
 
 # Mobile-first
-Dispositivos móveis estão cada vez mais sofisticados e podemos pensar que talvez não seja assim tão importante pensar neles primeiro, visto que o hardware e features deles já estão bem avançados, mas não... Assim como o hardware e features destes dispositivos avançam, novas features surgem exigindo mais recursos, e pensando pela estética e reaproveitamento, é mais fácil ajustar o conteúdo e layout de dispositivos móveis para Desktop do que o contrário.
+Dispositivos móveis estão cada vez mais sofisticados e podemos pensar que talvez não seja assim tão importante pensar neles primeiro, visto que o hardware e features deles já estão bem avançados, mas não... Assim como o hardware e features destes dispositivos avançam, novas features surgem exigindo mais recursos, e não é somente uma questão de estética, é também e principalmente uma questão de conteúdo.
 
+Pensando pela estética e reaproveitamento, é mais fácil ajustar o conteúdo e layout de dispositivos móveis para Desktop do que o contrário.
 
 Dispositivos móveis tem features incríveis que podem ser usadas para proporcionar uma experiencia melhor levando-a a um nível que o desktop não poderá proporcionar, ao menos não tão cedo; O gps, giroscópio, multitouch, acelerometro e etc podem enriquecer muito a experiencia e proporcionar ao usuário uma visão mais imersiva daquilo que se quer mostrar ou vender.
 
