@@ -42,7 +42,7 @@ Uma atualização no crawler do Google, feita em 2015, da prioridade a sites que
 https://webmasters.googleblog.com/2015/02/finding-more-mobile-friendly-search.html
 
 ### O design
-Uma coisa que se pensa ainda muito sobre responsividade e mobile first é de que isso é uma adaptação que deve ser feita somente no processo de desenvolvimento, fazendo com que muitas promessas de mobile-first não sejam cumpridas pois isso não é verdade; O processo criativo é tão importante quando o desenvolvimento quando iniciamos a construção ou adaptação para criar algo mobile-first.
+Uma coisa que se pensa ainda muito sobre responsividade e mobile first é de que isso é uma adaptação que deve ser feita somente no processo de desenvolvimento, fazendo com que muitas promessas de mobile-first não sejam cumpridas pois isso não é verdade; O processo criativo é tão importante quanto o desenvolvimento quando iniciamos a construção ou adaptação para criar algo mobile-first.
 
 #### O que é design responsivo?
 Esse conceito surgiu inicialmente para solucionar problemas de arquitetura em grandes cidades, um jeito de tentar resolver problemas para espaços pequenos, algo como móveis que pudessem ser dobrados, camas que pudessem ser guardadas na parede, tudo para dar a espaços pequenos o mesmo conforto de um espaço maior.
