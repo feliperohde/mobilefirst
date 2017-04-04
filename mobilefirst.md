@@ -93,7 +93,7 @@ O site possui recursos de interação social, como compartilhamentos, comentári
 
 Se seu público é jovem, por exemplo, muito provavelmente ele irá acessar o conteúdo de deu site atravéz de um dispositivo móvel.
 
-Se estou vendendo algo, como um restaurante por ex, é provável que a audiência suba por volta do meio-dia e também por volta das 20hrs e seu site deve estar preparado para dar acesso fácil a endereço e telefone, pois é provável que seu possível cliente esteja na rua ou no carro essa informação precisa ser vista rapidamente.
+Se estou vendendo algo, como um restaurante por ex, é provável que a audiência suba por volta do meio-dia e também por volta das 20hrs e seu site deve estar preparado para dar acesso fácil a endereço e telefone, pois é provável que seu possível cliente esteja na rua ou no carro e essa informação precisa ser vista rapidamente.
 
 ### Conclusão
 Sabemos que o devices móveis conquistaram seu espaço e sabemos que as pessoas em sua maioria preferem o celular para acessar a internet e interagir socialmente. Usuários estão cada vez mais exigentes quanto a isso, logo não haverá mais espaço para falhar com isso e sites que não são desenvolvidos pensando nessas pessoas perderão acessos e clientes.
