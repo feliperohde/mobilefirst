@@ -26,6 +26,8 @@ Uma pesquisada realizada em 2014 e divulgada em 2016 pelo IBGE, mostra que pela 
 Ainda no Brasil, **cerca de 45%** das pessoas usam o smartphone para pagamento de contas básicas como água e luz, um dado de 2015. Outro dado interessante é de que cerca de 7 milhões de brasileiros acessa a internet apenas pelo celular.
 **Fonte:** http://avellareduarte.com.br/fases-projetos/conceituacao/demandas-do-publico/pesquisas-de-usuarios-atividades-2/dados-sobre-o-publico-alvo/dispositivos-moveis-2015-dados-e-fontes/
 
+Recentemente, o WhatsApp anunciou que esta avaliando a possibilidade de permitir pagamentos através de seu app. (http://g1.globo.com/tecnologia/noticia/whatsapp-avalia-entrada-em-mercado-de-pagamento-digital-na-india.ghtml)
+
 #### Tráfego apenas pelos celulares
 O tráfego em sites utilizando smartphone cresceu **600% em 2010**.
 **Fonte:** http://news.bango.com/2010/02/16/600-percent-growth-in-mobile-web-usage/
