@@ -28,6 +28,7 @@ Ainda no Brasil, **cerca de 45%** das pessoas usam o smartphone para pagamento d
 
 Recentemente, o WhatsApp anunciou que esta avaliando a possibilidade de permitir pagamentos através de seu app.
 **Fonte:** https://olhardigital.uol.com.br/noticia/usuarios-vao-poder-fazer-pagamentos-pelo-whatsapp/67249
+
 **Fonte:** http://g1.globo.com/tecnologia/noticia/whatsapp-avalia-entrada-em-mercado-de-pagamento-digital-na-india.ghtml
 
 #### Tráfego apenas pelos celulares
