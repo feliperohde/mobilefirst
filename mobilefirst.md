@@ -77,7 +77,7 @@ Há de se pensar também que, nas vezes onde o design responsivo for bem aplicad
 ## 5 – O remanejamento
 Adicionar conteúdo em dispositivos de mesa como desktops é relativamente fácil. Dispositivos móveis limitam bastante isso, não deixando espaço para conteúdo irrelevante, a seleção das informações que devem ser mostradas em um dispositivo móvel exige alguns passos a mais já que é necessário mostrar somente o que seu mercado (público) quer ver.
 
-Organizar a informação para dispositivos móveis é um desafio, e por isso deve ser feito primeiro. Não somente de design, mas também de arquitetura de software.  Menus dropdown, o floating button ou o famoso menu drawer do [material design](https://material.io/guidelines/) foram criados para solucionar problemas de poluição visual em dispositivos móveis.
+Organizar a informação para dispositivos móveis é um desafio, e por isso deve ser feito primeiro. Não somente no design, mas também na arquitetura de software. Menus dropdown, o floating button ou o famoso menu drawer do [material design](https://material.io/guidelines/) foram criados para solucionar problemas de poluição visual em dispositivos móveis.
 
 Uma feature que funcione bem em um device móvel poderá ser usada sem problemas em um dispositivo com tela maior, algumas vezes pequenos ajustes estéticos podem ser feitos.
 
