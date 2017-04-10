@@ -95,7 +95,7 @@ Algumas perguntas podem ajudar a mensurar a importância dos dispositivos para c
  4. Estamos reformulando o site, então, quais as estatísticas de acesso de cada device?
  5. O site possui recursos de interação social, como compartilhamentos, comentários?
 
-Se o seu público é jovem, por exemplo, muito provavelmente ele irá acessar o conteúdo de deu site através de um dispositivo móvel. Cada caso deve ser estudado com mais profundidade de maneira individual para encontrar a melhor saída para problemas específicos.
+Se o seu público é jovem, por exemplo, muito provavelmente ele irá acessar o conteúdo de seu site através de um dispositivo móvel. Cada caso deve ser estudado com mais profundidade de maneira individual para encontrar a melhor saída para problemas específicos.
 
 
 ## Conclusão
