@@ -86,7 +86,7 @@ Uma feature que funcione bem em um device móvel poderá ser usada sem problemas
 ## Como descobrir a importância do design responsivo e mobile first para um projeto
 Algumas perguntas podem ajudar a mensurar a importância dos dispositivos para cada projeto.
 
- 1. Qual o publico-alvo deve ser atingido?
+ 1. Qual o público-alvo deve ser atingido?
  2.  Em qual hora do dia o publico costuma acessar o site?
  3. Quais os recursos ele usa ou deve poder usar no desktop? E no celular?
  4. Estamos reformulando o site, então, quais as estatísticas de acesso de cada device?
@@ -100,4 +100,4 @@ Sabemos que os devices móveis conquistaram seu espaço e sabemos que as pessoas
 
 O mundo está, claramente gastando mais tempo na internet usando o celular, é muito sensato desenvolver pensando primeiramente nessas pessoas.
 
-É muito importante trabalhar para viabilizar uma boa experiência e melhorar o conteúdo para esse publico, não somente para conquista-los mas também para evoluir este conceito e se preparar para os novos cenários que isso irá criar.
+É muito importante trabalhar para viabilizar uma boa experiência e melhorar o conteúdo para esse público, não somente para conquista-los mas também para evoluir este conceito e se preparar para os novos cenários que isso irá criar.
