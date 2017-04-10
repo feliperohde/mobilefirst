@@ -6,7 +6,8 @@ Dispositivos móveis estão cada vez mais sofisticados e presentes em nossas vid
 Já esclarecendo: mobile first **não é uma nova tecnologia**. Mobile first é um conceito, uma quebra de padrões, vícios e paradigmas que foram adquiridos no decorrer dos anos, enquanto o pensamento sempre esteve voltado para aplicações desktop. Além de tudo, é uma estratégia e um jeito diferente de enxergar o conteúdo que realmente importa em um site.
 
 **O que muda em um desenvolvimento pensado como mobile first?**
-Ao contrário da forma com que historicamente vínhamos trabalhando, focados na experiência de navegação em um computador de mesa ou notebook (e a versão para dispositivos móveis era feita na base do improviso), quando pensamos em **mobile first**, todas as etapas até a publicação de uma aplicação são feitas com foco no mobile, desde o UX, passando pelo design e desenvolvimento e finalmente chegando à redação de conteúdo. 
+
+Ao contrário da forma com que historicamente vínhamos trabalhando, focados na experiência de navegação em um computador de mesa ou notebook (e a versão para dispositivos móveis era feita na base do improviso), quando pensamos em mobile first, todas as etapas até a publicação de uma aplicação são feitas com foco no mobile, desde o UX, passando pelo design e desenvolvimento e finalmente chegando à redação de conteúdo. 
 
 Dispositivos móveis tem features incríveis que podem ser usadas para proporcionar uma experiência de navegação e interação superior, levando a um nível que, ao menos não tão cedo, o desktop não poderá proporcionar. GPS, giroscópio, multitouch e acelerômetro, por exemplo, são funcionalidades que podem enriquecer (e muito!) a experiência do usuário.
 
