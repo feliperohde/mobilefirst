@@ -1,14 +1,15 @@
 ![Alguns pontos interessantes sobre o conceito mobile-first](http://i.imgur.com/8ZcN71H.jpg)
 
 # Mobile-first
-Dispositivos móveis estão cada vez mais sofisticados e cada vez mais presentes em nossas vidas, ainda assim, muitas vezes pensamos que talvez não seja assim tão importante pensar neles primeiro na hora de criar e desenvolver os nossos sites.
+Dispositivos móveis estão cada vez mais sofisticados e presentes em nossas vidas. Ainda assim, muitas vezes eles não recebem a devida importância durante o processo de criação e desenvolvimento de nossos sites. Dotados de características específicas, requerem atenção especial para que ofereçam a melhor experiência possível a seus usuários. Foi nesta busca por otimização que nasceu o **mobile first**:o foco na experência do usuário em dispositivos móveis.
 
-Mobile first **não é uma nova tecnologia** ou **algo que encarece um projeto**, é apenas um conceito, uma quebra de padrões, vícios e paradigmas que foram adquiridos no decorrer dos anos, além de tudo, é uma estratégia e um jeito diferente de enxergar o conteúdo que realmente importa em um site.
+Já esclarecendo: mobile first **não é uma nova tecnologia**. Mobile first é um conceito, uma quebra de padrões, vícios e paradigmas que foram adquiridos no decorrer dos anos, enquanto o pensamento sempre esteve voltado para aplicações desktop. Além de tudo, é uma estratégia e um jeito diferente de enxergar o conteúdo que realmente importa em um site.
 
 **O que muda em um desenvolvimento pensado como mobile first?**
-Tudo, planejamento, UX, design e desenvolvimento são pensados com foco no mobile e não ao contrário, onde a versão para desktop é priorizada e a versão para dispositivos móveis é feita na base do improviso.
 
-Dispositivos móveis tem features incríveis que podem ser usadas para proporcionar uma experiência melhor levando-a a um nível que o desktop não poderá proporcionar, ao menos não tão cedo. O gps, giroscópio, multitouch, acelerômetro e outras funções que podem enriquecer e muito a experiência do usuário.
+Ao contrário da forma com que historicamente vínhamos trabalhando, focados na experiência de navegação em um computador de mesa ou notebook (e a versão para dispositivos móveis era feita na base do improviso), quando pensamos em mobile first, todas as etapas até a publicação de uma aplicação são feitas com foco no mobile, desde o UX, passando pelo design e desenvolvimento e finalmente chegando à redação de conteúdo. 
+
+Dispositivos móveis tem features incríveis que podem ser usadas para proporcionar uma experiência de navegação e interação superior, levando a um nível que, ao menos não tão cedo, o desktop não poderá proporcionar. GPS, giroscópio, multitouch e acelerômetro, por exemplo, são funcionalidades que podem enriquecer (e muito!) a experiência do usuário.
 
 
 ## Alguns dados relevantes
