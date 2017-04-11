@@ -19,30 +19,30 @@ Uma espiada rápida em estatísticas de uso da internet mostra o rápido crescim
 
 #### O celular é o meio de acesso a internet mais usado no Brasil
 Uma pesquisa realizada em 2014 e divulgada em 2016 pelo IBGE, mostra que pela primeira vez os **celulares passaram os computadores de mesa** no acesso a internet pelos brasileiros.
-**Fonte:** http://agenciabrasil.ebc.com.br/economia/noticia/2016-04/celular-e-principal-meio-de-acesso-internet-na-maioria-dos-lares
+<sub><sup>**Fonte:** http://agenciabrasil.ebc.com.br/economia/noticia/2016-04/celular-e-principal-meio-de-acesso-internet-na-maioria-dos-lares</sup></sub>
 
 #### Pagamento de contas pelos celulares
 Ainda no Brasil, **cerca de 45%** das pessoas usam o smartphone para pagamento de contas básicas como água e luz, um dado de 2015. Outro dado interessante é de que cerca de 7 milhões de brasileiros acessa a internet apenas pelo celular.
-**Fonte:** http://avellareduarte.com.br/fases-projetos/conceituacao/demandas-do-publico/pesquisas-de-usuarios-atividades-2/dados-sobre-o-publico-alvo/dispositivos-moveis-2015-dados-e-fontes/
+<sub><sup>**Fonte:** http://avellareduarte.com.br/fases-projetos/conceituacao/demandas-do-publico/pesquisas-de-usuarios-atividades-2/dados-sobre-o-publico-alvo/dispositivos-moveis-2015-dados-e-fontes/</sup></sub>
 
 Recentemente, o WhatsApp anunciou que esta avaliando a possibilidade de permitir pagamentos através de seu app.
-**Fonte:** https://olhardigital.uol.com.br/noticia/usuarios-vao-poder-fazer-pagamentos-pelo-whatsapp/67249
+<sub><sup>**Fonte:** https://olhardigital.uol.com.br/noticia/usuarios-vao-poder-fazer-pagamentos-pelo-whatsapp/67249</sup></sub>
 
 #### Tráfego apenas pelos celulares
 O tráfego em sites utilizando smartphone cresceu **600% em 2010**.
-**Fonte:** http://news.bango.com/2010/02/16/600-percent-growth-in-mobile-web-usage/
+<sub><sup>**Fonte:** http://news.bango.com/2010/02/16/600-percent-growth-in-mobile-web-usage/</sup></sub>
 
 #### Aumento na venda através de dispositivos móveis
 Em 2015, no Brasil, as vendas através de dispositivos móveis cresceram cerca de 20%.
-**Fonte:** http://opus-software.com.br/estatisticas-uso-celular-brasil/
+<sub><sup>**Fonte:** http://opus-software.com.br/estatisticas-uso-celular-brasil/</sup></sub>
 
 #### Maior número de acessos "mobile only"
 Em uma visão global o cenário não é muito diferente, em 2015 o número de acessos a internet "mobile only" ultrapassou os números de acesso "desktop only" em pouco mais de 1%.
-**Fonte:** http://comscore.com/Insights/Blog/Number-of-Mobile-Only-Internet-Users-Now-Exceeds-Desktop-Only-in-the-U.S
+<sub><sup>**Fonte:** http://comscore.com/Insights/Blog/Number-of-Mobile-Only-Internet-Users-Now-Exceeds-Desktop-Only-in-the-U.S</sup></sub>
 
 #### Em média, checamos o celular 150 vezes ao dia.
 Junte a isso com o fato de que a maior parte das pessoas checa o celular dentro de 15 minutos após acordar. O celular e, em especial, as notificações push, se tornaram o novo "horário nobre". 
-**Fonte:** https://www.thinkwithgoogle.com/articles/win-every-micromoment-with-better-mobile-strategy.html
+<sub><sup>**Fonte:** https://www.thinkwithgoogle.com/articles/win-every-micromoment-with-better-mobile-strategy.html</sup></sub>
 
 > O celular vem se tornando uma extensão de nossa mente, usamos ele pra praticamente tudo e dispomos de atenção para ele virtualmente o tempo todo. 
 
@@ -73,7 +73,7 @@ Se isso não for possível, deve-se ao menos fazer com que o conteúdo esteja na
 
 ### 4 – Maior SEO
 Uma atualização no crawler do Google, feita em 2015, dá prioridade a sites que sejam feitos pensados para dispositivos móveis. Depois desse update, o famoso buscador (que foi um dos primeiros a apresentar uma proposta envolvendo mobile first), prioriza para seus usuários conteúdos otimizados para celulares, e isso não vale somente se este está realmente buscando por um dispositivo móvel, sites otimizados para celulares ganham relevância mesmo quando buscados por computadores de mesa.
-**Fonte:** https://webmasters.googleblog.com/2015/02/finding-more-mobile-friendly-search.html
+<sub><sup>**Fonte:** https://webmasters.googleblog.com/2015/02/finding-more-mobile-friendly-search.html</sup></sub>
 
 
 ### 5 – Tudo isso, sem custo adicional, muito pelo contrário
@@ -82,7 +82,7 @@ Uma atualização no crawler do Google, feita em 2015, dá prioridade a sites qu
 Um projeto pensado como desktop first geralmente custa mais caro, pois tende a gastar todos os recursos para uma versão desktop e depois ainda exige esforço adicional para uma versão mobile. E aí acaba saindo ainda mais caro, pois essa adaptação exige esforço. Já um projeto mobile first, tende a administrar bem os recursos para construir algo para o celular e depois gastar essa economia em uma versão enriquecida para desktop, neste fluxo, a adaptação é muito mais fácil e exige bem menos esforço.
 
 Há de se pensar também que, nas vezes onde o design responsivo for bem aplicado, não exigirá mudanças para telas maiores.
-**Fonte:** https://webmasters.googleblog.com/2015/02/finding-more-mobile-friendly-search.html
+<sub><sup>**Fonte:** https://webmasters.googleblog.com/2015/02/finding-more-mobile-friendly-search.html</sup></sub>
 
 ![Mobile first não é uma nova tecnologia e nem algo que vai encarecer o projeto](http://i.imgur.com/uzE85gS.jpg)
 
