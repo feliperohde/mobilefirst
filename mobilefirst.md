@@ -46,6 +46,7 @@ Junte a isso com o fato de que a maior parte das pessoas checa o celular dentro 
 
 > O celular vem se tornando uma extensão de nossa mente, usamos ele pra praticamente tudo e dispomos de atenção para ele virtualmente o tempo todo. 
 
+
 ## Ainda não estou convencido. Por que eu devo mudar minha forma de conceber sites e pensar "mobile first"?
 
 ![Mobile first = content first](http://i.imgur.com/e3OrboR.jpg)
@@ -75,8 +76,6 @@ Uma atualização no crawler do Google, feita em 2015, dá prioridade a sites qu
 **Fonte:** https://webmasters.googleblog.com/2015/02/finding-more-mobile-friendly-search.html
 
 
-![Mobile first não é uma nova tecnologia e nem algo que vai encarecer o projeto](http://i.imgur.com/uzE85gS.jpg)
-
 ### 5 – Tudo isso, sem custo adicional, muito pelo contrário
 É comum o receio por optar por mobile first, pois imagina-se que será mais caro. Isso não é verdade!
 
@@ -84,6 +83,8 @@ Um projeto pensado como desktop first geralmente custa mais caro, pois tende a g
 
 Há de se pensar também que, nas vezes onde o design responsivo for bem aplicado, não exigirá mudanças para telas maiores.
 **Fonte:** https://webmasters.googleblog.com/2015/02/finding-more-mobile-friendly-search.html
+
+![Mobile first não é uma nova tecnologia e nem algo que vai encarecer o projeto](http://i.imgur.com/uzE85gS.jpg)
 
 
 ## Conclusão
