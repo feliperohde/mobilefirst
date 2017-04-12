@@ -1,7 +1,7 @@
 ![Alguns pontos interessantes sobre o conceito mobile-first](http://i.imgur.com/8ZcN71H.jpg)
 
 # Mobile-first
-Dispositivos móveis estão cada vez mais sofisticados e presentes em nossas vidas. Ainda assim, muitas vezes eles não recebem a devida importância durante o processo de criação e desenvolvimento de nossos sites. Dotados de características específicas, requerem atenção especial para que ofereçam a melhor experiência possível a seus usuários. Foi nesta busca por otimização que nasceu o **mobile first**:o foco na experência do usuário em dispositivos móveis.
+Dispositivos móveis estão cada vez mais sofisticados e presentes em nossas vidas. Ainda assim, muitas vezes eles não recebem a devida importância durante o processo de criação e desenvolvimento de nossos sites. Dotados de características específicas, requerem atenção especial para que ofereçam a melhor experiência possível a seus usuários. Foi nesta busca por otimização que nasceu o **mobile first**: o foco na experência do usuário em dispositivos móveis.
 
 Já esclarecendo: mobile first **não é uma nova tecnologia**. Mobile first é um conceito, uma quebra de padrões, vícios e paradigmas que foram adquiridos no decorrer dos anos, enquanto o pensamento sempre esteve voltado para aplicações desktop. Além de tudo, é uma estratégia e um jeito diferente de enxergar o conteúdo que realmente importa em um site.
 
@@ -12,96 +12,82 @@ Ao contrário da forma com que historicamente vínhamos trabalhando, focados na 
 Dispositivos móveis tem features incríveis que podem ser usadas para proporcionar uma experiência de navegação e interação superior, levando a um nível que, ao menos não tão cedo, o desktop não poderá proporcionar. GPS, giroscópio, multitouch e acelerômetro, por exemplo, são funcionalidades que podem enriquecer (e muito!) a experiência do usuário.
 
 
-## Alguns dados relevantes
-Uma espiada rápida em estatísticas de uso da internet mostra o rápido crescimento dos números que representam dispositivos móveis como tablets e celulares e também de conteúdo e apps feitos para esses dispositivos.
-
-O celular é quase uma extensão de nossa mente, usamos ele pra praticamente tudo e esses dados a seguir mostram o quão rápido isso está crescendo no mundo inteiro, incluindo o Brasil.
+## Certo, mas isso é realmente necessário?
+Uma espiada rápida em estatísticas de uso da internet mostra o rápido crescimento dos números referentes ao uso de dispositivos móveis, como tablets e celulares, e também de conteúdo e apps feitos para esses dispositivos.
 
 ![Acesso a internet por celulares ultrapassa os computadores](http://i.imgur.com/hITNGQf.jpg)
 
 #### O celular é o meio de acesso a internet mais usado no Brasil
-Uma pesquisada realizada em 2014 e divulgada em 2016 pelo IBGE, mostra que pela primeira vez os **celulares passaram os computadores de mesa** no acesso a internet pelos brasileiros.
-**Fonte:** http://agenciabrasil.ebc.com.br/economia/noticia/2016-04/celular-e-principal-meio-de-acesso-internet-na-maioria-dos-lares
+Uma pesquisa realizada em 2014 e divulgada em 2016 pelo IBGE, mostra que pela primeira vez os **celulares passaram os computadores de mesa** no acesso a internet pelos brasileiros. <br/>
+<sub><sup>**Fonte:** http://agenciabrasil.ebc.com.br/economia/noticia/2016-04/celular-e-principal-meio-de-acesso-internet-na-maioria-dos-lares</sup></sub>
 
 #### Pagamento de contas pelos celulares
-Ainda no Brasil, **cerca de 45%** das pessoas usam o smartphone para pagamento de contas básicas como água e luz, um dado de 2015. Outro dado interessante é de que cerca de 7 milhões de brasileiros acessa a internet apenas pelo celular.
-**Fonte:** http://avellareduarte.com.br/fases-projetos/conceituacao/demandas-do-publico/pesquisas-de-usuarios-atividades-2/dados-sobre-o-publico-alvo/dispositivos-moveis-2015-dados-e-fontes/
+Ainda no Brasil, **cerca de 45%** das pessoas usam o smartphone para pagamento de contas básicas como água e luz, um dado de 2015. Outro dado interessante é de que cerca de 7 milhões de brasileiros acessa a internet apenas pelo celular.<br/>
+<sub><sup>**Fonte:** http://avellareduarte.com.br/fases-projetos/conceituacao/demandas-do-publico/pesquisas-de-usuarios-atividades-2/dados-sobre-o-publico-alvo/dispositivos-moveis-2015-dados-e-fontes/</sup></sub>
 
-Recentemente, o WhatsApp anunciou que esta avaliando a possibilidade de permitir pagamentos através de seu app.
-**Fonte:** https://olhardigital.uol.com.br/noticia/usuarios-vao-poder-fazer-pagamentos-pelo-whatsapp/67249
+Recentemente, o WhatsApp anunciou que esta avaliando a possibilidade de permitir pagamentos através de seu app. <br/>
+<sub><sup>**Fonte:** https://olhardigital.uol.com.br/noticia/usuarios-vao-poder-fazer-pagamentos-pelo-whatsapp/67249</sup></sub>
 
 #### Tráfego apenas pelos celulares
-O tráfego em sites utilizando smartphone cresceu **600% em 2010**.
-**Fonte:** http://news.bango.com/2010/02/16/600-percent-growth-in-mobile-web-usage/
+O tráfego em sites utilizando smartphone cresceu **600% em 2010**. <br/>
+<sub><sup>**Fonte:** http://news.bango.com/2010/02/16/600-percent-growth-in-mobile-web-usage/</sup></sub>
 
-#### Aumento na venda de dispositivos
-Em 2015, no Brasil, as vendas através de dispositivos móveis cresceram cerca de 20%.
-**Fonte:** http://opus-software.com.br/estatisticas-uso-celular-brasil/
+#### Aumento na venda através de dispositivos móveis
+Em 2015, no Brasil, as vendas através de dispositivos móveis cresceram cerca de 20%. <br/>
+<sub><sup>**Fonte:** http://opus-software.com.br/estatisticas-uso-celular-brasil/</sup></sub>
 
 #### Maior número de acessos "mobile only"
-Em uma visão global o cenário não é muito diferente, em 2015 o número de acessos a internet "mobile only" ultrapassou os números de acesso "desktop only" em pouco mais de 1%.
-**Fonte:** http://comscore.com/Insights/Blog/Number-of-Mobile-Only-Internet-Users-Now-Exceeds-Desktop-Only-in-the-U.S
+Em uma visão global o cenário não é muito diferente, em 2015 o número de acessos a internet "mobile only" ultrapassou os números de acesso "desktop only" em pouco mais de 1%. <br/>
+<sub><sup>**Fonte:** http://comscore.com/Insights/Blog/Number-of-Mobile-Only-Internet-Users-Now-Exceeds-Desktop-Only-in-the-U.S</sup></sub>
+
+#### Em média, checamos o celular 150 vezes ao dia. 
+Junte a isso com o fato de que a maior parte das pessoas checa o celular dentro de 15 minutos após acordar. O celular e, em especial, as notificações push, se tornaram o novo "horário nobre". <br/>
+<sub><sup>**Fonte:** https://www.thinkwithgoogle.com/articles/win-every-micromoment-with-better-mobile-strategy.html</sup></sub>
+
+> O celular vem se tornando uma extensão de nossa mente, usamos ele pra praticamente tudo e dispomos de atenção para ele virtualmente o tempo todo. 
 
 
-## 5 pontos interessantes sobre mobile first
-Além de nos fazer pensar e repensar sobre um assunto tão recorrente na vida de quem trabalha com web, o pensamento mobile first também tem alguns pontos bem interessantes.
+## Ainda não estou convencido. Por que eu devo mudar minha forma de conceber sites e pensar "mobile first"?
 
 ![Mobile first = content first](http://i.imgur.com/e3OrboR.jpg)
 
-### 1 – A exibição tem que ser progressiva
+### 1 – Conteúdo realmente relevante
+Via de regra, o usuário que visita seu site ou aplicação está ali pelo conteúdo, não pelo design, código ou qualquer outra coisa. Se a  criação de conteúdo em si já apresenta desafios diversos, quando passamos para uma área de leitura muito mais limitada, o desafio se torna ainda maior. Dispositivos móveis não deixam espaço para conteúdo irrelevante, sendo primordial fornecer uma comunicação concisa e coesa, para que o seu público-alvo tenha fácil acesso ao que realmente importa.
 
-Imagine o cenário onde no celular algumas informações que estão presentes no desktop não serão exibidas, o caminho mais curto seria esconder no celular esse conteúdo, a estética estaria resolvida, problema solucionado, mobile first, não é? Errado, essa abordagem fará com que o dispositivo móvel carregue todo o conteúdo e depois o esconda, justamente o device que tem menos recursos de processamento e acesso a internet tem que baixar coisas que nem serão vistas e de forma nenhuma serão aproveitadas, dessa forma haverá perda de performance e o usuário será obrigado a gastar banda de sua conexão móvel para baixar conteúdo que nunca verá.
+### 2 - Arquitetura da informação pensando no worst-case scenario
+Uma coisa que ainda se pensa muito sobre responsividade e mobile first é que isso é uma adaptação que deve ser feita somente no processo de desenvolvimento, fazendo com que muitas premissas de mobile-first não sejam cumpridas, pois isso não é verdade. O processo criativo é tão importante quando o desenvolvimento quando iniciamos a construção ou adaptação para criar algo realmente mobile-first.
 
-A abordagem correta neste caso, onde o device móvel e desktop diferem em conteúdo é usar o design adaptativo. Se isso não for possível, deve-se ao menos fazer com que o conteúdo esteja naturalmente escondido e depois fazer com que o desktop o exiba, evitando assim processamento desnecessário de renderização por parte do celular.
+Organizar a informação para dispositivos móveis é um desafio, e por isso deve ser feito primeiro. A tela menor que o monitor, a área de toque dos dedos maior que do ponteiro do mouse e a falta de um ponteiro para demonstrar possíveis interações (hover), são alguns dos motivos que tornam a arquitetura da informação para dispositivos móveis um desafio. Menus dropdown, o floating button ou o famoso menu drawer do [material design](https://material.io/guidelines/) são soluções criadas visando solucionar problemas de poluição visual em dispositivos móveis.
 
-### 2 – O SEO
-Uma atualização no crawler do Google, feita em 2015, da prioridade a sites que sejam feitos pensados para dispositivos móveis. Depois desse update, o famoso buscador (que foi um dos primeiros a apresentar uma proposta envolvendo mobile first), prioriza para seus usuários conteúdos otimizados para celulares, e isso não vale somente se este está realmente buscando por um dispositivo móvel, sites otimizados para celulares ganham relevância mesmo quando buscados por computadores de mesa.
-**Fonte:** https://webmasters.googleblog.com/2015/02/finding-more-mobile-friendly-search.html
+Uma vez concebida uma solução que funcione bem em um device móvel, esta pode ser facilmente adaptável a um dispositivo com tela maior.
 
-### 3 – O design
-Uma coisa que ainda se pensa muito sobre responsividade e mobile first é que isso é uma adaptação que deve ser feita somente no processo de desenvolvimento, fazendo com que muitas promessas de mobile-first não sejam cumpridas pois isso não é verdade. O processo criativo é tão importante quando o desenvolvimento quando iniciamos a construção ou adaptação para criar algo realmente mobile-first.
+### 3 – Conexões 3g/4g limitadas = máxima preocupação com performance!
 
-**Design responsivo e adaptativo?**
-O design responsivo surgiu inicialmente para solucionar problemas de arquitetura em grandes cidades, um jeito de tentar resolver problemas para espaços pequenos, algo como móveis que pudessem ser dobrados, camas que pudessem ser guardadas na parede, tudo para dar a espaços pequenos o mesmo conforto de um espaço maior.
+Imagine um cenário onde, no celular, algumas informações que estão presentes no desktop não serão exibidas. O caminho mais curto seria esconder no celular esse conteúdo, a estética estaria resolvida, problema solucionado, certo? 
 
-Na web o conceito começou a surgir por volta de 2000, com o surgimento de telas LCD e com o surgimento de novos notebooks e padrões de tela. Mas isso ainda não justificava a criação de um novo padrão de design. Somente com o surgimento dos celulares foi que uma reformulação no design se fez necessária e a partir de 2010 o design responsivo para web começou a ser um dos assuntos mais debatidos no meio.
+Errado. Essa abordagem fará com que o dispositivo móvel carregue todo o conteúdo e depois o esconda, fazendo com que justamente o device que tem menos recursos de processamento e acesso a internet tenha que baixar coisas que não serão vistas e, de forma alguma, aproveitadas.
 
-O design responsivo visa ajustar esteticamente o conteúdo para os diferentes tipos de tela que devemos dar suporte, para podermos ter uma leitura desse conteúdo da maneira mais confortável em cada dispositivo ou resolução.
+A abordagem correta neste caso (onde o device móvel e desktop diferem em conteúdo) é fazer uma exibição progressiva, mobile first. Isso significa que, em vez de esconder em mobile o que não será utilizado, o componente será inserido apenas na versão desktop, evitando assim o desperdício de poder de processamento e alguns kb do precioso plano de dados do seu usuário. 
 
-Sutilmente diferente do design responsivo, e como uma variação dele, o design adaptativo não muda somente a estética, mas sim todo o conteúdo; Um exemplo seria um artigo para leitura rápida em um celular e um artigo completo com imagens e videos no desktop, o conteúdo mudou mas a informação que se passa ainda é a mesma.
+Se isso não for possível, deve-se ao menos fazer com que o conteúdo esteja naturalmente escondido e depois fazer com que o desktop o exiba, evitando assim processamento desnecessário de renderização por parte do celular.
 
-## 4 – Os custos
-É comum o receio pelo mobile-first na questão de custos pois imaginamos que como isso muitas vezes é vendido como uma opção a parte, logo deve ser mais caro e isso não é verdade.
+### 4 – Maior SEO
+Uma atualização no crawler do Google, feita em 2015, dá prioridade a sites que sejam feitos pensados para dispositivos móveis. Depois desse update, o famoso buscador (que foi um dos primeiros a apresentar uma proposta envolvendo mobile first), prioriza para seus usuários conteúdos otimizados para celulares, e isso não vale somente se este está realmente buscando por um dispositivo móvel, sites otimizados para celulares ganham relevância mesmo quando buscados por computadores de mesa.<br/>
+<sub><sup>**Fonte:** https://webmasters.googleblog.com/2015/02/finding-more-mobile-friendly-search.html</sup></sub>
 
-Um projeto pensado em desktop first geralmente custa mais caro, pois tende a gastar todos os recursos para uma versão desktop e depois cortar custos para uma versão mobile, e nesse ponto é onde fica mais caro, pois essa adaptação exige esforço. Já um projeto mobile first, tende a administrar bem os recursos para construir algo para o celular e depois gastar essa economia em uma versão enriquecida para desktop, neste fluxo, a adaptação é muito mais fácil exige bem menos esforço.
 
-Há de se pensar também que, nas vezes onde o design responsivo for bem aplicado, não exigirá mudanças para telas maiores.
-**Fonte:** https://webmasters.googleblog.com/2015/02/finding-more-mobile-friendly-search.html
+### 5 – Tudo isso, sem custo adicional, muito pelo contrário
+É comum o receio por optar por mobile first, pois imagina-se que será mais caro. Isso não é verdade!
 
-## 5 – O remanejamento
-Adicionar conteúdo em dispositivos de mesa como desktops é relativamente fácil. Dispositivos móveis limitam bastante isso, não deixando espaço para conteúdo irrelevante, a seleção das informações que devem ser mostradas em um dispositivo móvel exige alguns passos a mais já que é necessário mostrar somente o que seu mercado (público) quer ver.
+Um projeto pensado como desktop first geralmente custa mais caro, pois tende a gastar todos os recursos para uma versão desktop e depois ainda exige esforço adicional para uma versão mobile. E aí acaba saindo ainda mais caro, pois essa adaptação exige esforço. Já um projeto mobile first, tende a administrar bem os recursos para construir algo para o celular e depois gastar essa economia em uma versão enriquecida para desktop, neste fluxo, a adaptação é muito mais fácil e exige bem menos esforço.
 
-Organizar a informação para dispositivos móveis é um desafio, e por isso deve ser feito primeiro. Não somente no design, mas também na arquitetura de software. Menus dropdown, o floating button ou o famoso menu drawer do [material design](https://material.io/guidelines/) foram criados para solucionar problemas de poluição visual em dispositivos móveis.
-
-Uma feature que funcione bem em um device móvel poderá ser usada sem problemas em um dispositivo com tela maior, algumas vezes pequenos ajustes estéticos podem ser feitos.
+Há de se pensar também que, nas vezes onde o design responsivo for bem aplicado, não exigirá mudanças para telas maiores.<br/>
+<sub><sup>**Fonte:** https://webmasters.googleblog.com/2015/02/finding-more-mobile-friendly-search.html</sup></sub>
 
 ![Mobile first não é uma nova tecnologia e nem algo que vai encarecer o projeto](http://i.imgur.com/uzE85gS.jpg)
 
-## Como descobrir a importância do design responsivo e mobile first para um projeto
-Algumas perguntas podem ajudar a mensurar a importância dos dispositivos para cada projeto.
-
- 1. Qual o público-alvo deve ser atingido?
- 2.  Em qual hora do dia o publico costuma acessar o site?
- 3. Quais os recursos ele usa ou deve poder usar no desktop? E no celular?
- 4. Estamos reformulando o site, então, quais as estatísticas de acesso de cada device?
- 5. O site possui recursos de interação social, como compartilhamentos, comentários?
-
-Se o seu público é jovem, por exemplo, muito provavelmente ele irá acessar o conteúdo de seu site através de um dispositivo móvel. Cada caso deve ser estudado com mais profundidade de maneira individual para encontrar a melhor saída para problemas específicos.
-
 
 ## Conclusão
-Sabemos que os devices móveis conquistaram seu espaço e sabemos que as pessoas em sua maioria preferem o celular para acessar a internet e interagir socialmente e isso só tende a aumentar mais ainda nos próximos anos. Usuários estão cada vez mais exigentes em relação a performance de sites acessos via mobile, logo não haverá mais espaço para falhar e sites que não levarem isso em consideração perderão acessos e clientes.
+Os dispositivos móveis vieram para ficar: Eles conquistaram seu espaço e as pessoas que, em sua maioria, preferem o celular para acessar a internet e interagir socialmente (o que só tende a aumentar mais, nos próximos anos). Não há mais espaço para falhar, e sites que não levarem isso em consideração perderão acessos e clientes.
 
-O mundo está, claramente gastando mais tempo na internet usando o celular, é muito sensato desenvolver pensando primeiramente nessas pessoas.
-
-É muito importante trabalhar para viabilizar uma boa experiência e melhorar o conteúdo para esse público, não somente para conquista-los mas também para evoluir este conceito e se preparar para os novos cenários que isso irá criar.
+Ao fazer mobile first, não só nos adaptamos a esta realidade, oferecendo experiência, performance e conteúdo otimizados para nossos usuários, mas evoluímos cada vez mais este conceito, nos preparando para os novos cenários e desafios que a sociedade e a tecnologia irão criar.
