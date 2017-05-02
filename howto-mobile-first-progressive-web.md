@@ -197,3 +197,5 @@ elementos com posicionamento fixo
 sliders
 
 imagens
+
+progressive web + progressive enhancement
