@@ -1,5 +1,5 @@
 
-## Mobile-first
+## Como desenvolver mobile-first
 
 
 https://codepen.io/feliperohde/project/editor/ZwBMpD/
@@ -17,6 +17,7 @@ https://codepen.io/feliperohde/project/editor/ZwBMpD/
 - selects e elementos personalizados
 - vetor vs imagens
 - px, em ou rem? https://cloudfour.com/thinks/the-ems-have-it-proportional-media-queries-ftw/
+
 
 ### O dominio/urls
 É comum encontrar sites que usam segmentos ou subdomínios para servir conteúdo para dispositivos móveis. Isso geralmente acontece pois o site foi migrado para dar suporte a dispositivos móveis, então para separar o código e infraestrutura cria-se essa separação; Isso não é necessário, o usuário deve ter o sentimento de estar acessando o mesmo site e o mesmo conteúdo, esse tipo de abordagem pode gerar um pouco de insegurança quanto ao conteúdo que está sendo mostrado, não é uma má pratica mas o conteúdo móvel pode ser servido na mesma url mesmo quando este foi adaptado de um site desktop.
@@ -53,15 +54,18 @@ Outra metatag interessante é a **theme-color**, que faz com que a toolbar de de
 <!-- iOS Safari -->
 <meta name="apple-mobile-web-app-status-bar-style" content="#4285f4">
 
+<iframe width='100%' height='265' scrolling='no' title='Exemplo Mobile first' src='//codepen.io/feliperohde/embed/rmzeNX/?height=265&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/feliperohde/pen/rmzeNX/'>Exemplo Mobile first</a> by Felipe Rohde (<a href='http://codepen.io/feliperohde'>@feliperohde</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
 #### Chamadas de assets
 Nesse ponto, alem de respeitar as boas práticas sobre como fazer as chamadas de css e js, aquilo sobre por scripts no final da página sempre que possível mantendo no head somente chamadas de assets que setam a estética inicial do site, polyfills e coisas que infuenciarão no parseamento do restante do documento.
 
-É importante separar os arquivos de css para displays maiores, mas pq? Usando breakpoints responsivos podemos fazer com que somente o desktop realize alguma tarefa estetica, mas se esta regra estivar no mesmo arquivo css, mesmo que dispositivos móveis ignorem a regra, ele ainda terá que baixar o arquivo inteiro, é um questão de payload, se o device nao precisa da regra ou não a interpretará ele nao deve fazer download não é?
+É importante separar os arquivos de css para displays maiores, mas pq? Usando breakpoints responsivos podemos fazer com que somente o desktop realize alguma tarefa estetica, mas se esta regra estivar no mesmo arquivo css, mesmo que dispositivos móveis ignorem a regra, ele ainda terá que baixar o arquivo inteiro, é um questão de payload, se o device não precisa da regra ou não a interpretará ele nao deve fazer download não é?
 
 <link rel="stylesheet" type="text/css" href="style.css" media="screen, handheld" />
 <link rel="stylesheet" type="text/css" href="enhanced.css" media="screen  and (min-width: 40.5em)" />
 
-Desta forma, o navegador somente fará download do arquivo quando a largura do viewport for proporcional a 40.5em (que é basicamente 648px)
+Desta forma, o navegador somente fará download do arquivo quando a largura do viewport for proporcional a 40.5em (que é basicamente 648px, veremos isso mais pra frente).
 
 #### Os links
 Exitem algumas pequenas mudanças em links que podem melhorar a experiência para o usuário que nevega pelo seu smartphone; O browser disponibiliza algumas formas de interação mais intima com o aparelho, links de telefone e até mesmo links para aplicativos instalados. parece pouco mas faz diferença.
@@ -134,12 +138,17 @@ A instrução de como formatar um input devem estar no atributo placeholder e a 
 
 Inputs ja suportam o atributo pattern, que apesar de não atuar como máscara, dá suporte de validação para a informação inserida, impossibilitando a submissão de informações em desacordo.
 
+#### Modais e alertas
+
+
+#### Transições e animações
+
 ### O Css
 #### As medidas
 A tipografia é parte essencial no design e também no desenvolvimento, seu principal atributo é o tamanho; Quando se lê um jornal ou revista o tamanho da fonte é fixo, se estiver pequeno posso traze-lo mais para perto ou mais para longe se estiver grande. Na web precisamos de um tamanho relativo, pois existem muitos tamanhos de tela.
 Lembra-se de quanto acessava sites e mesmo aplicando zoom a fonte permanecia do mesmo tamanho? Hoje esse isso não acontece mais devido a evolução dos browsers.
 
-Ainda há dificuldade em entender as medidas relativas para a tipografia na web, pensa-se as vezes que as medidas relativas são responsáveis por uma ***adaptaçao mágica*** de tamanhos de um device para outro, na verdade não é bem isso; Por exemplo, as vezes um titulo deve ter a proporção de 24px no celular e de 40px no desktop e espera-se que isso aconteça implemente por mudar a medida para uma medida proporcional, e acaba gerando decepção pois não é isso que acontece, pois, se no desktop foi previsto um titulo proporcionalmente maior, devo setar um tamanho maior para o desktop, uma medida relativa não fará a mágia, ao menos não toda a mágica.
+Ainda há dificuldade em entender as medidas relativas para a tipografia na web, pensa-se as vezes que as medidas relativas são responsáveis por uma ***adaptaçao mágica*** de tamanhos de um device para outro, na verdade não é bem isso; Por exemplo, as vezes um titulo deve ter a proporção de 24px no celular e de 40px no desktop e espera-se que isso aconteça simplesmente por mudar a medida para uma medida proporcional, e acaba gerando decepção pois não é isso que acontece; Se no desktop foi previsto um titulo proporcionalmente maior, devo setar um tamanho maior para o desktop, uma medida relativa não fará a magia, ao menos não toda a mágica.
 Medidas relativas, tem muito mais haver com o padrão do browser e o zoom, por padrão, os navegadores tem a seguinte regra: 1em = 12pt = 16px = 100%, mas nada me impede de mudar isso e setar o font-size padrão do meu browser para 18px.
 
 E isso é útil pois assim como posso trazer o jornal mais pra perto, na web posso aumentar o tamanho padrão; Dessa forma elementos com medidas relativas respeitarão a nova medida padrão do browser ao contrário de uma medida fixa em px.
@@ -190,7 +199,7 @@ document.fonts.ready.then
 
 as transiçoes e animaçoes
 
-#### Menus e elementos com posicionamento fixo
+#### Navegação Menus e elementos com posicionamento fixo
 
 Celulares tem um tamanho de tela limitado, e é comum usar um navigation drawer, hamburger menu, header fixo ou call to action fixos para facilitar o acesso a alguns links e aprimorar a navegação, mas não faça tudo de uma vez, por favor, pois o usuário só vai guardar uma referência de onde estão os links importantes.
 
@@ -198,7 +207,10 @@ A guideline material design possui boas referências para isso, disponibilizando
 
 Na web é comum usar a navigation drawer para exibir uma lista de links internos uteis, como acesso aos principais pontos do site (about, trabalhos, contato) assim como links relacionados ao perfil logado (deslogar, alterar foto)
 
+Em nosso exemplo, criaremos uma lista simples com link + icone e texto junto com um botão flutuante para chamar esse menu e inicialmente ficará off-canvas.
 
+<iframe width="100%" height='265' scrolling='no' title='Exemplo Mobile first - Navegação' src='//codepen.io/feliperohde/embed/zwdqdr/?height=265&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/feliperohde/pen/zwdqdr/'>Exemplo Mobile first - Navegação</a> by Felipe Rohde (<a href='http://codepen.io/feliperohde'>@feliperohde</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
 
 #### Sliders e carouseis
 Dois componentes que podemos dizer que todo site tem, exibem desde listas de imagens a lista de produtos; Mas como usa-lo bem e qual a melhor forma de escrever o código pra isso?
@@ -268,24 +280,39 @@ mas note que agora em um navegador com largura superior a 375px e 1 de densidade
 900 / (.8*(376 * 1)) = 2.9920212765957444
 375 / (.8*(376 * 1)) = 1.2466755319148937
 
-acontece que o navegador nunca fará upscaling caso haja disponível uma imagem maior para ser exibida e esse pode ser um complicador, veja:
+Acontece que o navegador tentará não fazer upscaling caso a regra corrente não seja satisfeita e haja disponível uma imagem maior para ser exibida, e isso pode ser um complicador veja:
 
 <iframe width="100%" height='265' scrolling='no' title='responsive image request example medium' src='//codepen.io/feliperohde/embed/XRgOJJ/?height=265&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/feliperohde/pen/XRgOJJ/'>responsive image request example medium</a> by Felipe Rohde (<a href='http://codepen.io/feliperohde'>@feliperohde</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
 
+Por isso é importante criar uma regra satisfatória ou disponibilizar uma ampla gama de imagens com pequenos intervalos.
+
 O que confunde muito aqui é que devido a forte ligaçao com css, somos de certa forma forçados a pensar que o valor do atributo sizes, definirá a largura estética da imagem quando na verdade ela somente dará uma base de calculo para o navegador escolher uma imagem, nada impede de informar ao navegador para que baixe uma imagem com fator de 80% e exibi-la no front com 100% de largura, no entando é recomendável respeitar a proporção informada visto que esse é o motivo dela existir.
 
-Tem um jeito mais fácil de aplicar isso? sim, veja bem, é muito mais fácil setar somete o srcset para intervalos de imagens e tambem disponibilizar uma versão em 2x, veja:
+Tem um jeito mais fácil de aplicar isso, sem precisar elaborar ou entender todos esses cálculos malucos? sim, veja bem, é muito mais fácil setar somete o srcset para intervalos de imagens e também disponibilizar uma versão em 2x, veja:
 
 <iframe width="100%" height='265' scrolling='no' title='responsive image request example complex' src='//codepen.io/feliperohde/embed/BRZGEL/?height=265&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/feliperohde/pen/BRZGEL/'>responsive image request example complex</a> by Felipe Rohde (<a href='http://codepen.io/feliperohde'>@feliperohde</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
 
-Também existem ferramentas para facilitar esse trabalho, uma delas é:
+Também existem ferramentas para facilitar esse trabalho, uma delas se chama responsivebreakpoints, e foi criada justamente pra salvar-nos desse trabalho:
 http://www.responsivebreakpoints.com/
 
+Agora também temos que ter uma pequena infraestrutura para servir toda essa gama de imagens, para isso precisamos de algum endpoint que me devolva imagens redimensionadas para os formatos que preciso, sem precisar, claro, fazer upload de todos esses formatos e sim somente da maior imagem; O thumbor ( http://thumbor.org/) é um otimo canditado para isso, é facil de integrar e existem receitas prontas para subir containers docker com ele, como esta, disponibilizada no github:
+https://github.com/APSL/docker-thumbor
+
+seguindo o exemplo do repositório, após implementado, nossas urls na srcset ficariam assim:
+/unsafe/100x100/http://www.google.com/images/srpr/logo3w.png 100w,
+/unsafe/200x200/http://www.google.com/images/srpr/logo3w.png 200w,
+/unsafe/375x375/http://www.google.com/images/srpr/logo3w.png 375w
+
+e assim por diante até satisfazer todos os intervalos importantes para determinada imagem.
+
+tentar fazer um codepen pra isso, problema, crossdomain
 
 #### Exibição progressiva
-No post anterior falamos da importância de exibir o conteúdo progressivamente, ou seja, ir exibindo as coisas conforme os breakpont sao satisfeitos, é aqui que o javascript entra em cena. Suponhamos que em nosso layout de tablet algo a mais deve ser exibido, ao invéz então de ja ter esse conteúdo carregado mas com display none, faremos melhor, veja:
+No post anterior falamos da importância de exibir o conteúdo progressivamente, ou seja, ir exibindo as coisas conforme os breakpont são satisfeitos; Mas podemos ir além e fazer não só a exibição progressiva mas também fazer carregamento progressivo; É aqui que o javascript entra em cena. Suponhamos que em nosso layout de tablet algo a mais deve ser exibido, ao invéz então de já ter esse conteúdo carregado mas com display none, faremos melhor, veja:
 
 <iframe width="100%" height='265' scrolling='no' title='dWRaNR' src='//codepen.io/feliperohde/embed/dWRaNR/?height=265&theme-id=0&default-tab=css,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/feliperohde/pen/dWRaNR/'>dWRaNR</a> by Felipe Rohde (<a href='http://codepen.io/feliperohde'>@feliperohde</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
+
+Neste exemplo simples, ao atingir 40em de proporção horizontal, o device mostra uma div e também inicia um request ajax carregando conteúdo extra para aquela div; Isso poder ser muito útil quando queremos incrementar o conteúdo para um dispositivo com mais capacidade, no nosso caso, somente carregamos uma imagem a mais, mas poderia ser uma galeria, videos relacionados ou artigos do mesmo autor.
