@@ -236,7 +236,7 @@ Então, suponhamos que a tela do navegador tenha 320px de largura e que a densid
 
 nosso media querie informa ao browser que acima de 400px de largura a imagem ocupará 80% do viewport, mas estamos abaixo entao o browser sabe que a imagem deverá ocupar 100% do viewport, vejamos
 
-nossa formula: largura da imagem / (fator * (largura do device * desidade de pixels))
+nossa formula: largura da imagem / (fator * (largura do device * densidade de pixels))
 
 375 / (1*(320 * 1)) = *1.171875*  - **(375 dividido por 100% de 320 é igual a)**
 1500 / (1*(320 * 1)) = *4.6875* - **(1500 dividido por 100% de 320 é igual a)**
@@ -265,12 +265,23 @@ mas note que agora em um navegador com largura superior a 375px e 1 de densidade
 900 / (1*(376 * 1)) = 2.393617021276596
 375 / (1*(376 * 1)) = 0.9973404255319149
 
-acontece que o media querie também define o aredondamento, min arredondará para baixo e max arredondará para cima, nosso media querie usa min-width ou seja, 2.39 arredondado para baixo é 2 e 0.99 aredondado para baixo é 0, se tivessemos usado max-width, 0.99 se tornaria 1 e 2.39 se tornaria 3 entao o valor mais proximo de nossa densidade de pixels seria 0.99 e a segunda imagem seria escolhida. veja:
+900 / (.8*(376 * 1)) = 2.9920212765957444
+375 / (.8*(376 * 1)) = 1.2466755319148937
+
+acontece que o navegador nunca fará upscaling caso haja disponível uma imagem maior para ser exibida e esse pode ser um complicador, veja:
 
 <iframe width="100%" height='265' scrolling='no' title='responsive image request example medium' src='//codepen.io/feliperohde/embed/XRgOJJ/?height=265&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/feliperohde/pen/XRgOJJ/'>responsive image request example medium</a> by Felipe Rohde (<a href='http://codepen.io/feliperohde'>@feliperohde</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
 
 O que confunde muito aqui é que devido a forte ligaçao com css, somos de certa forma forçados a pensar que o valor do atributo sizes, definirá a largura estética da imagem quando na verdade ela somente dará uma base de calculo para o navegador escolher uma imagem, nada impede de informar ao navegador para que baixe uma imagem com fator de 80% e exibi-la no front com 100% de largura, no entando é recomendável respeitar a proporção informada visto que esse é o motivo dela existir.
+
+Tem um jeito mais fácil de aplicar isso? sim, veja bem, é muito mais fácil setar somete o srcset para intervalos de imagens e tambem disponibilizar uma versão em 2x, veja:
+
+<iframe width="100%" height='265' scrolling='no' title='responsive image request example complex' src='//codepen.io/feliperohde/embed/BRZGEL/?height=265&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/feliperohde/pen/BRZGEL/'>responsive image request example complex</a> by Felipe Rohde (<a href='http://codepen.io/feliperohde'>@feliperohde</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
+Também existem ferramentas para facilitar esse trabalho, uma delas é:
+http://www.responsivebreakpoints.com/
 
 
 #### Exibição progressiva
