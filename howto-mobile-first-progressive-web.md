@@ -190,12 +190,91 @@ document.fonts.ready.then
 
 as transiçoes e animaçoes
 
-navigation drawer
+#### Menus e elementos com posicionamento fixo
 
-elementos com posicionamento fixo
+Celulares tem um tamanho de tela limitado, e é comum usar um navigation drawer, hamburger menu, header fixo ou call to action fixos para facilitar o acesso a alguns links e aprimorar a navegação, mas não faça tudo de uma vez, por favor, pois o usuário só vai guardar uma referência de onde estão os links importantes.
 
-sliders
+A guideline material design possui boas referências para isso, disponibilizando navigation drawer, bottom navigation, floating button e menus contextuais, cada um instiga o usuário para uma ações e comportamentos diferentes.
 
-imagens
+Na web é comum usar a navigation drawer para exibir uma lista de links internos uteis, como acesso aos principais pontos do site (about, trabalhos, contato) assim como links relacionados ao perfil logado (deslogar, alterar foto)
 
-progressive web + progressive enhancement
+
+
+#### Sliders e carouseis
+Dois componentes que podemos dizer que todo site tem, exibem desde listas de imagens a lista de produtos; Mas como usa-lo bem e qual a melhor forma de escrever o código pra isso?
+
+Navegadores móveis não exibem a barra de rolagem, ela só é exibida enquanto o evento scroll esta acontecendo.
+
+Setas são comumente usadas para informar o usuário que existem mais pra se ver, mas esse não é o unico jeito de fazer o usuário perceber a existencia de uma lista escondida em um slider; Um jeito também muito comum de fazer isso é mostrar parte do conteúdo escondido, incentivando o usuário a usar o scroll para verificar o conteúdo, claro que existe aplicaçao para os dois e temos que escolher o melhor jeito de fazer com que o usuário entendar a existencia de conteúdo extra.
+
+Também depende de layout e diagramaçao, um hero slider por examplo é muito melhor apresentado quando ocupa toda a largura da tela, entao nesta caso, o uso das setas vem a calhar; Já em uma listagem de produtos ou produtos relacionados a exibiçao parcial do proximo item se torna mais interessante e deixa a interface mais limpa para o que é importante, o produto; Pode-se ainda instruir o usuário da existencia de conteúdo extra utilizando uma animaçao que exemplifique o comportamento.
+
+####  Imagens
+http://www.responsivebreakpoints.com/
+
+##### Carregar a imagem certa
+Um dos fatores cruciais em um site é o tempo de carregamento e as imagens tem muita responsabilidade neste ponto, portanto, é importante disponibilizar a imagem certa.
+
+Durante muito tempo isso foi um trabalho árduo, felizmente a web evolui rapido e hoje temos o atributo **srcset** nas imagens, esse atributo permite que coloquemos um pouquinho de regra para que o navegador escolha a url de onde baixar o arquivo.
+
+o jeito mais simples de uso é esse:
+<iframe width='100%' height='265' scrolling='no' title='responsive image request example simple' src='//codepen.io/feliperohde/embed/VbWqYw/?height=265&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/feliperohde/pen/VbWqYw/'>responsive image request example simple</a> by Felipe Rohde (<a href='http://codepen.io/feliperohde'>@feliperohde</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
+Basicamente mantemos o atributo src como fallback e adiconamos duas urls no atributo srcset separadas por virgula, note que ao final de cada url existe um modifiador **1x** ou **2x** separado com um espaço da url; Isso diz ao browser que a url descrita com o modificador 1x deve ser usada quando a densidade de pixels for 1, e a 2x quando for 2 no caso de dispositivos retina.
+
+Mas podemos ir muito mais alem, fazendo srcsets mais elaborados em conjunto com o atributo **sizes**. Esse atributo esta diretamente ligado com o css, e nos permite fazer mediaqueries para nossos sources, veja:
+
+sizes="(min-width: 400px) 80vw, 100vw"
+
+com isso estamos informando ao browser que em resoluçoes acima de 400px a imagem ocupará 80% do viewport, caso contrário ela ocupará 100% do viewport. Vale lembrar que isso não dita regra estética, somente para escolha de source.
+
+<iframe width="100%" height='265' scrolling='no' title='responsive image request example medium' src='//codepen.io/feliperohde/embed/RVgEpR/?height=178&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/feliperohde/pen/RVgEpR/'>responsive image request example medium</a> by Felipe Rohde (<a href='http://codepen.io/feliperohde'>@feliperohde</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
+Então, suponhamos que a tela do navegador tenha 320px de largura e que a densidade de pixels seja 1, qual das duas imagens o navegador escolherá para exibir? vamos fazer as contas.
+
+nosso media querie informa ao browser que acima de 400px de largura a imagem ocupará 80% do viewport, mas estamos abaixo entao o browser sabe que a imagem deverá ocupar 100% do viewport, vejamos
+
+nossa formula: largura da imagem / (fator * (largura do device * desidade de pixels))
+
+375 / (1*(320 * 1)) = *1.171875*  - **(375 dividido por 100% de 320 é igual a)**
+1500 / (1*(320 * 1)) = *4.6875* - **(1500 dividido por 100% de 320 é igual a)**
+
+1.17 está mais proximo de 1 (que é a nossa densidade de pixels) entao  para dispositivos com largura de 320px que acessao esta imagem, o navegador fará o download da primeira imagem
+
+e se for uma tela retina? vamos fazer as contas novamente.
+
+375 / (1*(320 * 2)) = 0.5859375 **(375 dividido por 100% de 640 é igual a)**
+1500 / (1*(320 * 2)) = 2.34375 **(1500 dividido por 100% de 640 é igual a)**
+
+2.34 esta mais proximo de 2 do que 0.58 entao neste caso o browser fará download da segunda imagem.
+
+mas e se o navegador tirver mais que 400px de largura? dissemos a ele que neste caso as imagem ocupariam 80% do viewport, vamos conferir os calculos para ver qual imagem o browser vai escolher para baixar. vamos imaginar que a largura agora é 900px e que a densidade de pixels é 1.
+
+375 / (.8*(900 * 1)) = 0.5208333333333334 **(375 dividido por 80% de 900 é igual a)**
+1500 / (.8*(900 * 1)) = 2.0833333333333335 **(1500 dividido por 80% de 900 é igual a)**
+
+neste caso 0.5 esta mais proximo da nossa densidade de pixel do que 2.08 e o browser fará download da imagem 1; Portanto para uma resoluçao de 900px de largura com densidade de 1px uma imagem de qualidade inferior será exibida, vamos corrigir isso incrementando nosso srcset. Adicionamos uma src para uma imagem com 900px de largura e informamos para o srcset que ela tem 900px de largura usando 900w no final. isso deve resolver o problema.
+
+<iframe width="100%" height='265' scrolling='no' title='responsive image request example medium' src='//codepen.io/feliperohde/embed/Njgeez/?height=265&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/feliperohde/pen/Njgeez/'>responsive image request example medium</a> by Felipe Rohde (<a href='http://codepen.io/feliperohde'>@feliperohde</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
+mas note que agora em um navegador com largura superior a 375px e 1 de densidade o navegador baixa a imagem com 900px de largura, mas por que? definimos que o fator será de 80% apenas acima de 400px
+
+900 / (1*(376 * 1)) = 2.393617021276596
+375 / (1*(376 * 1)) = 0.9973404255319149
+
+acontece que o media querie também define o aredondamento, min arredondará para baixo e max arredondará para cima, nosso media querie usa min-width ou seja, 2.39 arredondado para baixo é 2 e 0.99 aredondado para baixo é 0, se tivessemos usado max-width, 0.99 se tornaria 1 e 2.39 se tornaria 3 entao o valor mais proximo de nossa densidade de pixels seria 0.99 e a segunda imagem seria escolhida. veja:
+
+<iframe width="100%" height='265' scrolling='no' title='responsive image request example medium' src='//codepen.io/feliperohde/embed/XRgOJJ/?height=265&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/feliperohde/pen/XRgOJJ/'>responsive image request example medium</a> by Felipe Rohde (<a href='http://codepen.io/feliperohde'>@feliperohde</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
+O que confunde muito aqui é que devido a forte ligaçao com css, somos de certa forma forçados a pensar que o valor do atributo sizes, definirá a largura estética da imagem quando na verdade ela somente dará uma base de calculo para o navegador escolher uma imagem, nada impede de informar ao navegador para que baixe uma imagem com fator de 80% e exibi-la no front com 100% de largura, no entando é recomendável respeitar a proporção informada visto que esse é o motivo dela existir.
+
+
+#### Exibição progressiva
+No post anterior falamos da importância de exibir o conteúdo progressivamente, ou seja, ir exibindo as coisas conforme os breakpont sao satisfeitos, é aqui que o javascript entra em cena. Suponhamos que em nosso layout de tablet algo a mais deve ser exibido, ao invéz então de ja ter esse conteúdo carregado mas com display none, faremos melhor, veja:
+
+<iframe width="100%" height='265' scrolling='no' title='dWRaNR' src='//codepen.io/feliperohde/embed/dWRaNR/?height=265&theme-id=0&default-tab=css,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/feliperohde/pen/dWRaNR/'>dWRaNR</a> by Felipe Rohde (<a href='http://codepen.io/feliperohde'>@feliperohde</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
