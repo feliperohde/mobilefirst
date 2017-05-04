@@ -221,6 +221,9 @@ Setas são comumente usadas para informar o usuário que existem mais pra se ver
 
 Também depende de layout e diagramaçao, um hero slider por examplo é muito melhor apresentado quando ocupa toda a largura da tela, entao nesta caso, o uso das setas vem a calhar; Já em uma listagem de produtos ou produtos relacionados a exibiçao parcial do proximo item se torna mais interessante e deixa a interface mais limpa para o que é importante, o produto; Pode-se ainda instruir o usuário da existencia de conteúdo extra utilizando uma animaçao que exemplifique o comportamento.
 
+<iframe height='265' scrolling='no' title='Exemplo Mobile first - Sliders e carrouseis' src='//codepen.io/feliperohde/embed/MmvrQq/?height=265&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/feliperohde/pen/MmvrQq/'>Exemplo Mobile first - Sliders e carrouseis</a> by Felipe Rohde (<a href='http://codepen.io/feliperohde'>@feliperohde</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
 ####  Imagens
 http://www.responsivebreakpoints.com/
 
