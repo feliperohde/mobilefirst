@@ -1,8 +1,8 @@
 
 ## Como desenvolver mobile-first
-O desenvolvimento mobile first ainda é motivo de pesadelos para designers e desenvolvedores, acredito que o motivo seja a crença de que coisas a mais tem devem ser feitas para satisfazer algum tipo de cliente que veio de algum lugar desconhecido e que é muito exigente; Sim ele é muito exigente, mas nada a mais tem que ser feito, na verdade fazemos menos, menos é mais; A criação e desenvolvimento mobile-first é basicamente criar coisas de maneira progressiva e não adaptar toda a parafernalha de desktops para celulares, isso sim seria doloroso.
+O desenvolvimento mobile first ainda é motivo de pesadelos para designers e desenvolvedores; Para designers pq pensam que terão que fazer um brainstorm totalmente diferente ou que perderão parte da criação por não pensar em telas maiores e para desenvolvedor por pensar em como vai desenvolver tudo aquilo do desktop para o celular. A criação e desenvolvimento mobile-first é basicamente criar coisas de maneira progressiva ao invés de adaptar toda a parafernalha de desktops para celulares, isso sim seria doloroso, não tem haver com ignorar telas maiores ou migrar features desenvolvidas para elas, e sim pensar nas telas maiores depois.
 
-Ao final deste testo teremos uma pagina simples, mobile-first e que poderemos ter como base para projetos no futuro, e principalmente, uma página que vamos gostar de acessar no celular.
+Ao final deste testo teremos uma pagina simples, mobile-first responsiva que poderemos ter como base para projetos no futuro, e principalmente, uma página que vamos gostar de acessar no celular.
 
 Para isso revisaremos alguns pontos e vamos aplicando em nosso código.
 
@@ -12,17 +12,17 @@ Para isso revisaremos alguns pontos e vamos aplicando em nosso código.
 ### ResponsiveUI e componentes reutilizáveis
 Desenvolvedor e designer devem estar em sintonia aqui, não é tao fácil criar um elemento gráfico que se adapte em todos os contextos, mas é preciso, pois não queremos ter esforço para adaptar a informação de um celular pra um tablet ou desktop, na verdade não queremos faze-lo; Um componente gráfico responsivo tem muita responsabilidade e ele deve diminuir ao máximo o esforço para adaptação de conteúdo entre as telas.
 
-Os cards, eles cairam no gosto, são simples, podem acomodar imagens, videos, textos, botoes... São amigáveis a gestos, agradam visualmente e mais do que isso: os usuários entendem os cards; São um ótimo exemplo de componentes visuais reutilizáveis e responsivos. 
+Os cards, eles cairam no gosto, são simples, podem acomodar imagens, videos, textos, botoes... São amigáveis a gestos, agradam visualmente e mais do que isso: os usuários entendem os cards; São um ótimo exemplo de componentes visuais reutilizáveis e responsivos.
 
 Também são fácies de serem escritos.
 
 https://material.io/guidelines/components/cards.html
 
 ### É tudo lista
-Mais alguém reparou que a web de celulares (e não só de celulares) e apps são basicamente listas de coisas? Lista de texto, lista de imagem, lista de texto e imagem, lista horizontal e vertical, lista de listas, lista de opções, lista de reações... é tudo lista, elas estão em todos os lugares mostrando listas de todo o tipo de informação as vezes de mais de um tipo ao mesmo tempo.
+Mais alguém reparou que a web de celulares (e não só de celulares) e apps são basicamente listas de coisas? Lista de texto, lista de imagem, lista de texto e imagem, lista horizontal e vertical, lista de listas, lista de opções, lista de reações, lista de paginas... é tudo lista, elas estão em todos os lugares mostrando listas de todo o tipo de informação as vezes de mais de um tipo ao mesmo tempo.
 Junto com listagens estão os outros dois pilares fundamentais para apresentar informações, os textos e as imagens e videos; Então é importante imaginarmos nossos componentes visuais e no desenvolvimento como listas, esses componentes básicos serão amplamente reaproveitados, devemos ter muito foco neles no inicio.
 
-A gente usa e não percebe que é uma lista, mas é, o feed do facebook, os cards de apps nas lojas do google e app store, os resultados do google, está em toda parte e tem um motivo pra isso: Listas são naturais, existiam muito antes de surgir o primeiro computador, a gente entende as listas.
+A gente usa e não percebe que é uma lista, mas é, o feed do facebook, os cards de apps nas lojas do google e app store, os resultados do google, está em toda parte e tem um motivo pra isso: Listas são naturais, existiam muito antes de surgir o primeiro computador, estão no nosso dia-a-dia além dos computares e celulares.
 
 E o que é mais legal, listas são nativas! são fáceis de ser escritas, ocupam pouquíssima marcação, não exigem muito estilo para ficarem bonitas e juntando elas com outras coisas básicas podemos melhorá-las muito, adicionar comportamento e gestos básicos como slide/swipe, que maravilha!
 
@@ -42,19 +42,21 @@ Para isso usamos a metatag de nome viewport; Essa tag aceita os seguintes valore
 É muito importante não setar valores para **minimun-scale**, **maximum-scale** e **user-scale**, visto que poderá causar muito desconforto para o usuário que quer dar zoom ou tirar zoom no site.
 
 Então temos a seguinte metatag para adicionar ao nosso header:
+```html
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+```
 
 Nela, dizemos para o browser que ele vai criar um viewport virtual da largura da tela do device e que o zoom inicial será 1, ou seja, sem zoom; Dessa forma o navegador móvel não tentará escalonar o conteúdo da nossa pagina automaticamente, ainda que através dos gestos do device o usuário ainda possa dar zoom ou tirar zoom de nosso conteúdo.
 
 Outra metatag interessante é a **theme-color**, que faz com que a toolbar de devices móveis fique de uma determinada cor, possibilitando o front-end adequar a cor da toolbar para a paleta de cores do site; O conteúdo desta tag aceita cores em hexadecimal.
-
+```html
 <!-- Chrome, Firefox OS and Opera -->
 <meta name="theme-color" content="#4285f4">
 <!-- Windows Phone -->
 <meta name="msapplication-navbutton-color" content="#4285f4">
 <!-- iOS Safari -->
 <meta name="apple-mobile-web-app-status-bar-style" content="#4285f4">
-
+```
 <iframe width='100%' height='265' scrolling='no' title='Exemplo Mobile first' src='//codepen.io/feliperohde/embed/rmzeNX/?height=265&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/feliperohde/pen/rmzeNX/'>Exemplo Mobile first</a> by Felipe Rohde (<a href='http://codepen.io/feliperohde'>@feliperohde</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
 
@@ -72,9 +74,10 @@ no exemplo acima adicionamos um simples evento de longpress nos cards.
 Nesse ponto, alem de respeitar as boas práticas sobre como fazer as chamadas de css e js, aquilo sobre por scripts no final da página sempre que possível mantendo no head somente chamadas de assets que setam a estética inicial do site, polyfills e coisas que infuenciarão no parseamento do restante do documento.
 
 É importante separar os arquivos de css para displays maiores, mas pq? Usando breakpoints responsivos podemos fazer com que somente o desktop realize alguma tarefa estetica, mas se esta regra estivar no mesmo arquivo css, mesmo que dispositivos móveis ignorem a regra, ele ainda terá que baixar o arquivo inteiro, é um questão de payload, se o device não precisa da regra ou não a interpretará ele nao deve fazer download não é?
-
+```html
 <link rel="stylesheet" type="text/css" href="style.css" media="screen, handheld" />
 <link rel="stylesheet" type="text/css" href="enhanced.css" media="screen  and (min-width: 40.5em)" />
+```
 
 Desta forma, o navegador somente fará download do arquivo quando a largura do viewport for proporcional a 40.5em (que é basicamente 648px, veremos isso mais pra frente).
 
@@ -86,7 +89,7 @@ Infelizmente na tag script o atributo media não é suportado e não sabemos se 
 Neste exemplo simples, verifica-se se o evento **ontouchstart** está disponível na janela e se sim escreve-se no DOM um novo script, fazendo com que o navegador baixe esse arquivo e disponibilize-o para  a pagina.
 
 <iframe width="100%" height='265' scrolling='no' title='Carregando script somente no desktop baseado em proporção' src='//codepen.io/feliperohde/embed/zwEYEd/?height=265&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/feliperohde/pen/zwEYEd/'>Carregando script somente no desktop baseado em proporção</a> by Felipe Rohde (<a href='http://codepen.io/feliperohde'>@feliperohde</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe> 
+</iframe>
 
 Já neste exemplo, podemos informar em qual proporção o script será adicionado.
 
@@ -94,9 +97,13 @@ Já neste exemplo, podemos informar em qual proporção o script será adicionad
 Exitem algumas pequenas mudanças em links que podem melhorar a experiência para o usuário que nevega pelo seu smartphone; O browser disponibiliza algumas formas de interação mais intima com o aparelho, links de telefone e até mesmo links para aplicativos instalados. parece pouco mas faz diferença.
 
 Podemos fazer uma chamada para o discador do smartphone simplesmente criando um link como esse:
+
+```html
 <a href="tel:1-562-867-5309">1-562-867-5309</a>
+```
 extra: O seo desta para este tipo de informação pode ser otimizado para que quando for encontrada por buscadores como o google, um card de ações seja exibido:
 
+```html
 <div itemscope itemtype="http://schema.org/LocalBusiness">
     <h1 itemprop="name">Beach Bunny Swimwear</h1>
     Phone:
@@ -106,6 +113,7 @@ extra: O seo desta para este tipo de informação pode ser otimizado para que qu
         </a>
       </span>
   </div>
+```
 https://css-tricks.com/the-current-state-of-telephone-links/
 
 De forma muito semelhante podemos chamar o app do whatsApp desta forma:
@@ -120,6 +128,8 @@ Links para email também são muito uteis, e ja é possivel através do link pas
 http://bradfrost.com/blog/mobile/better-numerical-inputs-for-mobile-forms/
 Ainda é comum encontrar formulários cheios de input text, input text pra todo tipo de informação; Problema disso não é nem a liberdade de o usuário poder digitar qualquer coisa no campo, a ideia de usar os input types adequados não é a validação e sim o conforto do contexto; Todos os browsers modernos possúem suporte para os input types mais conhecidos, disponibilizando para o usuário um teclado contextual muito mais adequado para o tipo de informação que deve ser inserida, isso é **incrível**.
 
+
+```html
   <!--   html inputs -->
   <input type="number" min="0" max="100" step="10" value="30" pattern="[0-9]*" />
   <input type="number" />
@@ -134,6 +144,7 @@ Ainda é comum encontrar formulários cheios de input text, input text pra todo 
   <input type="search"/>
   <input type="tel"/>
   <input type="week"/>
+```
 
 ### Selects e elementos personalizados
 Semelhante as máscaras, gosto de pensar que selects padrao iram satisfazer a todos os usuários, ja um select personalizado pode deixar alguém irritado.
@@ -145,9 +156,12 @@ Um comportamento extra pode ser adicionado desde que não remova um comportament
 
 ##### extra:
 Um atributo que pode melhorar a experiencia é o **autocapitalize**, que como o nome sugere, coloca em caixa alta caracteres, palavras ou frases.
+
+```html
  <input type="text" id="name" autocapitalize="words">
  <input type="text" id="initials" autocapitalize="characters">
  <textarea id="todolist" autocapitalize="sentences">
+```
 
 ### Quanto as máscaras?
 Gosto de pensar que um input sem máscara nunca irá prejudicar ninguém enquanto que um input mascarado sem dúvida deixará uma parte dos usuários desconfortável e por vezes os impossibilitará de inserir a informação, fazendo-os desistirem do preenchimento.
@@ -230,7 +244,9 @@ Já entrou em um site que aparentemente estava vazio, quando de repente, todo o 
 
 Não há problemas em carregar uma fonte para o site, desde que nao seja uma dúzia, mas existe problema em não dar fallback para elementos que ussam essa nova fonte; A propriedade **font-family** do css permite que inúmeras familhas de fontes seja atribuida a ela, fazendo com que, da direita pra a esquerda o browser tente encontrar a fonte para exibir o conteúdo. Logo um elemento com font-face, principalmente se for um elemento que exibe um conteúdo, um artigo por ex, deve ter uma font-family de fallback, para que seja usada enquanto o browser baixa a nova fonte ou mesmo se o browser nao conseguir baixar a fonte ou nao encontra-la.
 
+```css
 font-family: "My awesome font", "Times New Roman", Georgia, Serif;
+```
 
 Entendemos que é meio estranho o conteúdo carregar com uma fonte e depois mudar, mas ainda é melhor do que não conseguir ler nada. Dessa forma ainda é possível repensar font-faces para conteúdo. Ainda, é possível testar através de javascript se o browser conseguiu fazer download da font ou esta em processo e então talvez avisar nosso querido usuário alguma forma.
 
@@ -277,7 +293,9 @@ Basicamente mantemos o atributo src como fallback e adiconamos duas urls no atri
 
 Mas podemos ir muito mais alem, fazendo srcsets mais elaborados em conjunto com o atributo **sizes**. Esse atributo esta diretamente ligado com o css, e nos permite fazer mediaqueries para nossos sources, veja:
 
+```html
 sizes="(min-width: 400px) 80vw, 100vw"
+```
 
 com isso estamos informando ao browser que em resoluçoes acima de 400px a imagem ocupará 80% do viewport, caso contrário ela ocupará 100% do viewport. Vale lembrar que isso não dita regra estética, somente para escolha de source.
 
@@ -341,9 +359,12 @@ Agora também temos que ter uma pequena infraestrutura para servir toda essa gam
 https://github.com/APSL/docker-thumbor
 
 seguindo o exemplo do repositório, após implementado, nossas urls na srcset ficariam assim:
+
+```html
 /unsafe/100x100/http://www.google.com/images/srpr/logo3w.png 100w,
 /unsafe/200x200/http://www.google.com/images/srpr/logo3w.png 200w,
 /unsafe/375x375/http://www.google.com/images/srpr/logo3w.png 375w
+```
 
 e assim por diante até satisfazer todos os intervalos importantes para determinada imagem.
 
