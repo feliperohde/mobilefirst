@@ -20,11 +20,13 @@ https://material.io/guidelines/components/cards.html
 
 ### É tudo lista
 Mais alguém reparou que a web de celulares (e não só de celulares) e apps são basicamente listas de coisas? Lista de texto, lista de imagem, lista de texto e imagem, lista horizontal e vertical, lista de listas, lista de opções, lista de reações, lista de paginas... é tudo lista, elas estão em todos os lugares mostrando listas de todo o tipo de informação as vezes de mais de um tipo ao mesmo tempo.
-Junto com listagens estão os outros dois pilares fundamentais para apresentar informações, os textos e as imagens e videos; Então é importante imaginarmos nossos componentes visuais e no desenvolvimento como listas, esses componentes básicos serão amplamente reaproveitados, devemos ter muito foco neles no inicio.
+As listas estão juntas a outros dois pilares fundamentais para apresentar informações, os textos e as imagens e videos; Então é importante imaginarmos nossos componentes visuais no design e no desenvolvimento como listas, esses componentes básicos serão amplamente reaproveitados, devemos ter muito foco neles no inicio.
 
-A gente usa e não percebe que é uma lista, mas é, o feed do facebook, os cards de apps nas lojas do google e app store, os resultados do google, está em toda parte e tem um motivo pra isso: Listas são naturais, existiam muito antes de surgir o primeiro computador, estão no nosso dia-a-dia além dos computares e celulares.
+A gente usa e não percebe que é uma lista, mas é, o feed do facebook, os cards de apps nas lojas do google e app store, os resultados do google, o alt+tab do OS, está em toda parte e tem um motivo pra isso: Listas são naturais, existiam muito antes de surgir o primeiro computador, estão no nosso dia-a-dia além dos computares e celulares, não exigem esforço para serem compreendidas, faz parte do setup básico da nossa mente.
 
 E o que é mais legal, listas são nativas! são fáceis de ser escritas, ocupam pouquíssima marcação, não exigem muito estilo para ficarem bonitas e juntando elas com outras coisas básicas podemos melhorá-las muito, adicionar comportamento e gestos básicos como slide/swipe, que maravilha!
+
+Sempre que a informação puder estar em uma lista, coloque-a em uma lista, apresente-a bem e todos saberão usar.
 
 ### Setup básico
 A maioria dos browsers móveis modernos usam uma forma de exibir sites não otimizados para dispositivos móveis, isto é, eles definem um viewport maior para o site e acomodam todo o conteúdo escalado, o usuário então pode fazer zoom na área de interesse usando os gestos nativos de seu aparelho, isso proporciona uma melhor usabilidade para sites que não são otimizados para celulares, essa forma de exibição se tornou padrão nos navegadores; Esse comportamento é otimo para conteúdo nao otimizado para celulares, mas como estamos otimizando nosso conteúdo para navegadores móveis, devemos informar a eles a largura do viewport que ele deve usar.
@@ -46,7 +48,7 @@ Então temos a seguinte metatag para adicionar ao nosso header:
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 ```
 
-Nela, dizemos para o browser que ele vai criar um viewport virtual da largura da tela do device e que o zoom inicial será 1, ou seja, sem zoom; Dessa forma o navegador móvel não tentará escalonar o conteúdo da nossa pagina automaticamente, ainda que através dos gestos do device o usuário ainda possa dar zoom ou tirar zoom de nosso conteúdo.
+Nela, dizemos para o browser que ele vai criar um viewport virtual da largura da tela do device e que o zoom inicial será 1, ou seja, sem zoom; Dessa forma o navegador móvel não tentará escalonar o conteúdo da nossa pagina automaticamente, ainda que através dos gestos do device o usuário possa dar zoom ou tirar zoom de nosso conteúdo.
 
 Outra metatag interessante é a **theme-color**, que faz com que a toolbar de devices móveis fique de uma determinada cor, possibilitando o front-end adequar a cor da toolbar para a paleta de cores do site; O conteúdo desta tag aceita cores em hexadecimal.
 ```html
@@ -71,9 +73,9 @@ Em nosso exercício vamos encontrar uma forma de usa-los.
 no exemplo acima adicionamos um simples evento de longpress nos cards.
 
 ### Chamadas de assets
-Nesse ponto, alem de respeitar as boas práticas sobre como fazer as chamadas de css e js, aquilo sobre por scripts no final da página sempre que possível mantendo no head somente chamadas de assets que setam a estética inicial do site, polyfills e coisas que infuenciarão no parseamento do restante do documento.
+Aqui, além de respeitar as boas práticas sobre como fazer as chamadas de css e js, aquilo sobre por scripts no final da página sempre que possível mantendo no head somente chamadas de assets que setam a estética inicial do site, polyfills e coisas que infuenciarão no parseamento do restante do documento.
 
-É importante separar os arquivos de css para displays maiores, mas pq? Usando breakpoints responsivos podemos fazer com que somente o desktop realize alguma tarefa estetica, mas se esta regra estivar no mesmo arquivo css, mesmo que dispositivos móveis ignorem a regra, ele ainda terá que baixar o arquivo inteiro, é um questão de payload, se o device não precisa da regra ou não a interpretará ele nao deve fazer download não é?
+É interessante separar os arquivos de css para displays maiores, mas pq? Usando breakpoints responsivos podemos fazer com que somente o desktop realize alguma tarefa estetica, mas se esta regra estivar no mesmo arquivo css, mesmo que dispositivos móveis ignorem a regra, ele ainda terá que baixar o arquivo inteiro, é um questão de payload, se o device não precisa da regra ou não a interpretará ele nao deve fazer download não é?
 ```html
 <link rel="stylesheet" type="text/css" href="style.css" media="screen, handheld" />
 <link rel="stylesheet" type="text/css" href="enhanced.css" media="screen  and (min-width: 40.5em)" />
@@ -86,7 +88,7 @@ Infelizmente na tag script o atributo media não é suportado e não sabemos se 
 <iframe width="100%" height='265' scrolling='no' title='Carregando script somente no desktop' src='//codepen.io/feliperohde/embed/ybzLoJ/?height=265&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/feliperohde/pen/ybzLoJ/'>Carregando script somente no desktop</a> by Felipe Rohde (<a href='http://codepen.io/feliperohde'>@feliperohde</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
 
-Neste exemplo simples, verifica-se se o evento **ontouchstart** está disponível na janela e se sim escreve-se no DOM um novo script, fazendo com que o navegador baixe esse arquivo e disponibilize-o para  a pagina.
+Neste exemplo simples, verifica-se se o evento **ontouchstart** está disponível na janela e se não escreve-se no DOM um novo script, fazendo com que o navegador baixe esse arquivo e disponibilize-o para  a pagina.
 
 <iframe width="100%" height='265' scrolling='no' title='Carregando script somente no desktop baseado em proporção' src='//codepen.io/feliperohde/embed/zwEYEd/?height=265&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/feliperohde/pen/zwEYEd/'>Carregando script somente no desktop baseado em proporção</a> by Felipe Rohde (<a href='http://codepen.io/feliperohde'>@feliperohde</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
