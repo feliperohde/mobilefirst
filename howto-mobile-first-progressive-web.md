@@ -3,7 +3,7 @@
 
 O desenvolvimento mobile first ainda é motivo de pesadelos para designers e desenvolvedores; Para designers pq pensam que terão que fazer um brainstorm totalmente diferente ou que perderão parte da criação por não pensar em telas maiores e para desenvolvedor por pensar em como vai desenvolver tudo aquilo do desktop para o celular. A criação e desenvolvimento mobile-first é basicamente criar coisas de maneira progressiva ao invés de adaptar toda a parafernalha de desktops para celulares, isso sim seria doloroso, não tem haver com ignorar telas maiores ou migrar features desenvolvidas para elas, e sim pensar nas telas maiores depois.
 
-Ao final deste testo teremos uma pagina simples, mobile-first responsiva que poderemos ter como base para projetos no futuro, e principalmente, uma página que vamos gostar de acessar no celular.
+Ao final deste texto teremos uma pagina simples, mobile-first responsiva que poderemos ter como base para projetos no futuro, e principalmente, uma página que vamos gostar de acessar no celular.
 
 A ideia aqui não é criar um novo framework, pois já existem vários que levam a tarefa mobile-first bem a sério e funcionam muito bem, a exemplo o famoso bootstrap; Mas sim entender o por que das coisas serem feitas do jeito que são, inclusive nesses frameworks, para melhorar a criação e desenvolvimento e evitar mal uso de ferramentas assim.
 
