@@ -41,9 +41,11 @@ Uma dica também é não colocar o media querie dentro do componente, e sim o co
 </iframe>
 
 ### Pare de usar breakpoints para padrões de tela
-A cada dia surgem novos dispositivos com novos tamanhos e padrões de tela, em algum ponto se tornará insustentável suportar breakpoints para toda essa gama de telas, hoje são os celulares e tables, amanhã talvez as tvs ou os relógios de pulso e por que não óculus de realidade virtual?, então qual a solução para ajustar o conteúdo?
+A cada dia surgem novos dispositivos com novos tamanhos e padrões de tela, em algum ponto se tornará insustentável suportar breakpoints para toda essa gama de telas, hoje são os celulares e tables, amanhã talvez as tvs ou os relógios de pulso e por que não óculus de realidade virtual? então qual a solução para ajustar o conteúdo?
 
-Os breakpoints devem ser usados para o conteúdo e não para as telas, ficou confuso? calma, os breakpoints ainda são para uma medida de tamanho de tela mas não para devices. O ponto é que devemos ter como base o nosso conteúdo, deve-se criar uma ponto de interrupção somente quando e se o conteúdo exigir; O conteúdo deve ser nosso guia para criar os breakpoints, por exemplo, se a exibição e diagramação do conteúdo ainda esta funcionando bem no tablet, por que eu deveria criar um breakpoint para os tablets?
+Os breakpoints devem ser usados para o conteúdo e não para as telas, ficou confuso? calma, os breakpoints ainda são para uma medida de tamanho de tela mas não para devices. O ponto é que devemos ter como base o nosso conteúdo, deve-se criar uma ponto de interrupção somente quando e se o conteúdo exigir; O conteúdo deve ser nosso guia para criar os breakpoints.
+
+Um breakpoint para um device especifico se justifica somente quando devo exibir para este device alguma feature ou facilitador com o qual ele esta acostumando naquele contexto.
 
 ### Use medidas relativas para os media queries
 
