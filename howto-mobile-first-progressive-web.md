@@ -64,15 +64,20 @@ Outra metatag interessante é a **theme-color**, que faz com que a toolbar de de
 <iframe width='100%' height='265' scrolling='no' title='Exemplo Mobile first' src='//codepen.io/feliperohde/embed/rmzeNX/?height=265&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/feliperohde/pen/rmzeNX/'>Exemplo Mobile first</a> by Felipe Rohde (<a href='http://codepen.io/feliperohde'>@feliperohde</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
 
-### Gestos e ações
+### Gestos, eventos e ações
 Os sistemas operacionais de celulares estão cada vez mais usando gestos para realizar ações e é importante refletir isso em nossas páginas, pois não precisaremos ensinar o usuário a usar nosso site; O básico: swipe, longpress, tap e doubletab são os gestos mais usados e que praticamente todo usuário deve saber usar e o que esperar deles.
 
 Em nosso exercício vamos encontrar uma forma de usa-los.
 
+<iframe height='265' scrolling='no' title='Exemplo Mobile first - Eventos' src='//codepen.io/feliperohde/embed/WjdZMd/?height=265&theme-id=0&default-tab=css,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/feliperohde/pen/WjdZMd/'>Exemplo Mobile first - Eventos</a> by Felipe Rohde (<a href='http://codepen.io/feliperohde'>@feliperohde</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
+No exemplo acima, adicionamos um simples evento de longpress nos itens da nossa todo-list para exibir algumas informações e opções uteis para o contexto.
+
 <iframe weidth="100%" height='265' scrolling='no' title='Exemplo Mobile first - Gestos e ações' src='//codepen.io/feliperohde/embed/oWGjEy/?height=265&theme-id=0&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/feliperohde/pen/oWGjEy/'>Exemplo Mobile first - Gestos e ações</a> by Felipe Rohde (<a href='http://codepen.io/feliperohde'>@feliperohde</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
 
-no exemplo acima adicionamos um simples evento de longpress nos cards.
+Já neste exempo, aproveitamos o scroll da lista para simular o gesto "pan" dos celulares, parecido com swipe.
 
 ### Chamadas de assets
 Aqui, além de respeitar as boas práticas sobre como fazer as chamadas de css e js, aquilo sobre por scripts no final da página sempre que possível mantendo no head somente chamadas de assets que setam a estética inicial do site, polyfills e coisas que infuenciarão no parseamento do restante do documento.
