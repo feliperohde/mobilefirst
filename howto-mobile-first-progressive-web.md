@@ -47,10 +47,10 @@ Os breakpoints devem ser usados para o conteúdo e não para as telas, ficou con
 
 Um breakpoint para um device especifico se justifica somente quando devo exibir para este device alguma feature ou facilitador com o qual ele esta acostumando naquele contexto.
 
-### Use medidas relativas para os media queries
+### Use medidas relativas também para os media queries
 
-Assim como as medidas de fontes, as medidas de para media queries devem ser relativas, visto que o usuário pode querer dar zoom no conteúdo, um conteúdo com zoom pode ser adaptado e ter uma visualização ainda melhor...
-Um media querie com unidades fixas ignora o zoom visto que uma pagina com zoom ainda continua tendo a mesma quantidade de pixeis; Por que isso é importante? Pense que o usuário esta dando zoom em determinado artigo, isso o fará perder acesso a sidebar por exemplo ou ainda criar aquela barra de rolagem horizontal que as vezes é muito desconfortável, se minha media querie for relativa ao conteúdo que cabe na pagina, quando adicionar ou remover zoom os mediqueries farão o trabalho de ajustar o conteúdo.
+Assim como as medidas de fontes, as medidas para media queries devem ser relativas, visto que o usuário pode querer dar zoom no conteúdo, um conteúdo com zoom pode ser adaptado e ter uma visualização ainda melhor...
+Um media querie com unidades fixas ignora o zoom visto que uma pagina com zoom ainda continua tendo a mesma quantidade de pixels; Por que isso é importante? Pense que o usuário esta dando zoom em determinado artigo, isso o fará perder acesso a sidebar por exemplo ou ainda criar aquela barra de rolagem horizontal que as vezes é muito desconfortável, se minha media querie for relativa, quando adicionamos ou removemos zoom, os mediqueries farão o trabalho de ajustar o conteúdo.
 
 ### Transições e animações
 O sensação de movimento e transições entre os elementos aumenta muito a imersão e entendimento da informação que se quer mostrar, mas novamente, em um celular não há muito espaço para piruetas e devemos nos ater ao básico.
