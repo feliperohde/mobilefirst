@@ -4,6 +4,8 @@ O desenvolvimento mobile first ainda é motivo de pesadelos para designers e des
 
 Ao final deste testo teremos uma pagina simples, mobile-first responsiva que poderemos ter como base para projetos no futuro, e principalmente, uma página que vamos gostar de acessar no celular.
 
+A ideia aqui não é criar um novo framework, pois já existem vários que levam a tarefa mobile-first bem a sério e funcionam muito bem, a exemplo o famoso bootstrap; Mas sim entender o por que das coisas serem feitas do jeito que são, inclusive nesses frameworks, para melhorar a criação e desenvolvimento e evitar mal uso de ferramentas assim.
+
 Para isso revisaremos alguns pontos e vamos aplicando em nosso código.
 
 ### Dominio e urls
