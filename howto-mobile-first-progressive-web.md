@@ -7,7 +7,7 @@ Ao final deste testo teremos uma pagina simples, mobile-first responsiva que pod
 
 A ideia aqui não é criar um novo framework, pois já existem vários que levam a tarefa mobile-first bem a sério e funcionam muito bem, a exemplo o famoso bootstrap; Mas sim entender o por que das coisas serem feitas do jeito que são, inclusive nesses frameworks, para melhorar a criação e desenvolvimento e evitar mal uso de ferramentas assim.
 
-Para isso revisaremos alguns pontos e vamos aplicando em nosso código. Para poder simular seu celular, pode-se fazer um fork do código disponível no codepen e usar o debugMode disponibilizado no menu de vizualização.
+Para isso revisaremos alguns pontos e vamos aplicando em nosso código. Para poder simular em seu celular, pode-se fazer um fork do código disponível no codepen e usar o debugMode disponibilizado no menu de vizualização.
 
 ### Unidades de medida
 A tipografia é parte essencial no design e também no desenvolvimento, seu principal atributo é o tamanho; Quando se lê um jornal ou revista o tamanho da fonte é fixo, se estiver pequeno posso traze-lo mais para perto ou mais para longe se estiver grande. Na web precisamos de um tamanho relativo, pois existem muitos tamanhos de tela.
