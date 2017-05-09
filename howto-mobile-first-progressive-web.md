@@ -60,8 +60,9 @@ Se for fazer algum efeito, que este possa de alguma forma educar o usuário sobr
 Animar somente por animar não tem muito sentido. A animação tem que dizer algo pro usuário ou suavizar o aparecimento de um novo elemento na tela.
 
 ### Ícones
-![enter image description here](http://blog.froont.com/content/images/2014/11/09_Vectors-vs-Images-1.gif)
 Logo quando começamos a adaptar conteúdo para diversos tipos de tela, era muito comum usar um sprite@2x, por exemplo, para dar suporte a telas retina, mas não temos controle sobre as telas que surgirão, isso tem evoluido muito rápido, e ao menos para icones e assets que estarão sempre no nosso site, precisamos de um jeito mais consistente para exibir imagens.
+
+![Vetor vs imagem](http://blog.froont.com/content/images/2014/11/09_Vectors-vs-Images-1.gif)
 
 O svg é uma delas, e ele tem suporte básico a partir do IE9+, sua renderização é proporcional e não interpolada como das imagens, portando não é necessário um novo svg para exibir a mesma imagem em uma tela com densidade maior ou  se simplesmente queremos exibir uma imagem maior.
 
@@ -70,7 +71,7 @@ Os arquivos de fonte são outra forma, e para ícones é o preferido no desenvol
 ### Fontfaces
 Já entrou em um site que aparentemente estava vazio, quando de repente, todo o conteúdo aparece; Muitas vezes isso acontece pois o conteúdo que está ali esta usando uma fonte que não é nativa.
 
-Não há problemas em carregar uma fonte para o site, desde que nao seja uma dúzia, mas existe problema em não dar fallback para elementos que ussam essa nova fonte; A propriedade **font-family** do css permite que inúmeras familhas de fontes seja atribuida a ela, fazendo com que, da direita pra a esquerda o browser tente encontrar a fonte para exibir o conteúdo. Logo um elemento com font-face, principalmente se for um elemento que exibe um conteúdo, um artigo por ex, deve ter uma font-family de fallback, para que seja usada enquanto o browser baixa a nova fonte ou mesmo se o browser nao conseguir baixar a fonte ou nao encontra-la.
+Não há problemas em carregar uma fonte para o site, desde que não seja uma dúzia, mas existe problema em não dar fallback para elementos que ussam essa nova fonte; A propriedade **font-family** do css permite que inúmeras famílias de fontes seja atribuida a ela, fazendo com que, da direita pra a esquerda o browser tente encontrar a fonte para exibir o conteúdo. Logo um elemento com font-face, principalmente se for um elemento que exibe um conteúdo, um artigo por exemplo, deve ter uma font-family de fallback, para que seja usada enquanto o browser baixa a nova fonte ou mesmo se o browser nao conseguir baixar a fonte ou não encontra-la.
 
 ```css
 font-family: "My awesome font", "Times New Roman", Georgia, Serif;
@@ -78,8 +79,10 @@ font-family: "My awesome font", "Times New Roman", Georgia, Serif;
 
 Entendemos que é meio estranho o conteúdo carregar com uma fonte e depois mudar, mas ainda é melhor do que não conseguir ler nada. Dessa forma ainda é possível repensar font-faces para conteúdo. Ainda, é possível testar através de javascript se o browser conseguiu fazer download da font ou esta em processo e então talvez avisar nosso querido usuário alguma forma.
 
+```js
 document.fonts.onloadingdone
 document.fonts.ready.then
+```
 
 ### É tudo lista
 Mais alguém reparou que a web de celulares (e não só de celulares) e apps são basicamente listas de coisas? Lista de texto, lista de imagem, lista de texto e imagem, lista horizontal e vertical, lista de listas, lista de opções, lista de reações, lista de paginas... é tudo lista, elas estão em todos os lugares mostrando listas de todo o tipo de informação as vezes de mais de um tipo ao mesmo tempo.
