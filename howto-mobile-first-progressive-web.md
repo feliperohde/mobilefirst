@@ -24,6 +24,8 @@ no exemplo abaixo, temos dois titulos com o mesmo tamanho, mas o que acontece se
 
 Esse tipo de medida é muito mais comum de se aplicar para a tipografia, mas é recomendável também que margens, paddings e bordas também respeitem a medida relativa.
 
+Uma ferramenta que pode ajudar no entendimento disso é o PxToEm: http://pxtoem.com/
+
 ### Breakpoints
 Acima! Pare de usar max-with em seus mediaqueries, não é legal; Criar intervalos nos mediaqueries também é um sinal de que algo no design falhou.
 
@@ -48,7 +50,6 @@ Os breakpoints devem ser usados para o conteúdo e não para as telas, ficou con
 Um breakpoint para um device especifico se justifica somente quando devo exibir para este device alguma feature ou facilitador com o qual ele esta acostumando naquele contexto.
 
 ### Use medidas relativas também para os media queries
-
 Assim como as medidas de fontes, as medidas para media queries devem ser relativas, visto que o usuário pode querer dar zoom no conteúdo, um conteúdo com zoom pode ser adaptado e ter uma visualização ainda melhor...
 Um media querie com unidades fixas ignora o zoom visto que uma pagina com zoom ainda continua tendo a mesma quantidade de pixels; Por que isso é importante? Pense que o usuário esta dando zoom em determinado artigo, isso o fará perder acesso a sidebar por exemplo ou ainda criar aquela barra de rolagem horizontal que as vezes é muito desconfortável, se minha media querie for relativa, quando adicionamos ou removemos zoom, os mediqueries farão o trabalho de ajustar o conteúdo.
 
@@ -83,6 +84,14 @@ Entendemos que é meio estranho o conteúdo carregar com uma fonte e depois muda
 document.fonts.onloadingdone
 document.fonts.ready.then
 ```
+
+<iframe width="100%" height='265' scrolling='no' title='Verificando o carregamento de font-faces' src='//codepen.io/feliperohde/embed/EmQLzQ/?height=265&theme-id=0&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/feliperohde/pen/EmQLzQ/'>Verificando o carregamento de font-faces</a> by Felipe Rohde (<a href='http://codepen.io/feliperohde'>@feliperohde</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
+Infelizmente essa API não é suportada por navegadores IE11-, mas existem polyfills para resolver isso, e que podem ser usados para gerenciar fontes.
+
+https://github.com/typekit/webfontloader#readme
+https://github.com/zachleat/fontfaceonload
 
 ### É tudo lista
 Mais alguém reparou que a web de celulares (e não só de celulares) e apps são basicamente listas de coisas? Lista de texto, lista de imagem, lista de texto e imagem, lista horizontal e vertical, lista de listas, lista de opções, lista de reações, lista de paginas... é tudo lista, elas estão em todos os lugares mostrando listas de todo o tipo de informação as vezes de mais de um tipo ao mesmo tempo.
@@ -237,7 +246,6 @@ Links para email também são muito uteis, e ja é possivel através do link pas
 http://bradfrost.com/blog/mobile/better-numerical-inputs-for-mobile-forms/
 Ainda é comum encontrar formulários cheios de input text, input text pra todo tipo de informação; Problema disso não é nem a liberdade de o usuário poder digitar qualquer coisa no campo, a ideia de usar os input types adequados não é a validação e sim o conforto do contexto; Todos os browsers modernos possúem suporte para os input types mais conhecidos, disponibilizando para o usuário um teclado contextual muito mais adequado para o tipo de informação que deve ser inserida, isso é **incrível**.
 
-
 ```html
   <!--   html inputs -->
   <input type="number" min="0" max="100" step="10" value="30" pattern="[0-9]*" />
@@ -255,13 +263,8 @@ Ainda é comum encontrar formulários cheios de input text, input text pra todo 
   <input type="week"/>
 ```
 
-### Selects e elementos personalizados
-Semelhante as máscaras, gosto de pensar que selects padrao iram satisfazer a todos os usuários, ja um select personalizado pode deixar alguém irritado.
-Um dos maiores problemas de selects personalizados em dispositivos móveis é que eles tiram o comportamento padrão do elemento quando deveriam somente mudar a estética; Cada sistema operacional trabalha de uma maneira diferente para mostar a lista de um select e os usuários estao acostumados com isso e esperam qua isso funcione; No IOS por exemplo, quando clico em um select o sistema operacional mostra uma lista, semelhante ao bottom sheet do android, disponibilizando sempre a informaçao do select neste padrão, isso é prático e fácil de usar, alem disso, esperamos que funcione assim, pois todo o ecossistema envolta funciona assim.
-
-A aparência estética de um select, input, input radio ou checkbox podem ser alteradas com css. Existem atributos nativos que permitem seleção de datas e horários.
-
-Um comportamento extra pode ser adicionado desde que não remova um comportamento existente, ou ainda, desde que tenhamos a responsabilidade de tratar esse comportamento de forma a respeitar o ecossistema de cada usuário.
+<iframe width="100%" height='265' scrolling='no' title='Exemplo Mobile first - Inputs' src='//codepen.io/feliperohde/embed/oWoQNB/?height=265&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/feliperohde/pen/oWoQNB/'>Exemplo Mobile first - Inputs</a> by Felipe Rohde (<a href='http://codepen.io/feliperohde'>@feliperohde</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
 
 ##### extra:
 Um atributo que pode melhorar a experiencia é o **autocapitalize**, que como o nome sugere, coloca em caixa alta caracteres, palavras ou frases.
@@ -271,6 +274,14 @@ Um atributo que pode melhorar a experiencia é o **autocapitalize**, que como o 
  <input type="text" id="initials" autocapitalize="characters">
  <textarea id="todolist" autocapitalize="sentences">
 ```
+
+### Selects e elementos personalizados
+Semelhante as máscaras, gosto de pensar que selects padrao iram satisfazer a todos os usuários, ja um select personalizado pode deixar alguém irritado.
+Um dos maiores problemas de selects personalizados em dispositivos móveis é que eles tiram o comportamento padrão do elemento quando deveriam somente mudar a estética; Cada sistema operacional trabalha de uma maneira diferente para mostar a lista de um select e os usuários estao acostumados com isso e esperam qua isso funcione; No IOS por exemplo, quando clico em um select o sistema operacional mostra uma lista, semelhante ao bottom sheet do android, disponibilizando sempre a informaçao do select neste padrão, isso é prático e fácil de usar, alem disso, esperamos que funcione assim, pois todo o ecossistema envolta funciona assim.
+
+A aparência estética de um select, input, input radio ou checkbox podem ser alteradas com css. Existem atributos nativos que permitem seleção de datas e horários.
+
+Um comportamento extra pode ser adicionado desde que não remova um comportamento existente, ou ainda, desde que tenhamos a responsabilidade de tratar esse comportamento de forma a respeitar o ecossistema de cada usuário.
 
 ### Quanto as máscaras?
 Gosto de pensar que um input sem máscara nunca irá prejudicar ninguém enquanto que um input mascarado sem dúvida deixará uma parte dos usuários desconfortável e por vezes os impossibilitará de inserir a informação, fazendo-os desistirem do preenchimento.
@@ -290,6 +301,9 @@ Inputs ja suportam o atributo pattern, que apesar de não atuar como máscara, d
 Alertas continuam sendo úteis e não tente transformar um alerta em uma modal, existe um componente nativo no sistema operacional do celular para isso com o qual nosso querido usuário já está habituado;
 
 A estética deve se diferente também, a tela é pequena e devemos aproveita-la ao máximo, uma modal no celurar vai parecer uma nova tela, podemos usar um gesto de swipeDown para fecha-la e uma transição pode dar instrução ao usuário de que aquilo é uma modal e não uma nova página.
+
+<iframe width="100%" height='265' scrolling='no' title='Exemplo Mobile first - Modal' src='//codepen.io/feliperohde/embed/EmQrPL/?height=265&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/feliperohde/pen/EmQrPL/'>Exemplo Mobile first - Modal</a> by Felipe Rohde (<a href='http://codepen.io/feliperohde'>@feliperohde</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
 
 ### Imagens
 http://www.responsivebreakpoints.com/
@@ -317,9 +331,9 @@ com isso estamos informando ao browser que em resoluçoes acima de 400px a image
 
 Então, suponhamos que a tela do navegador tenha 320px de largura e que a densidade de pixels seja 1, qual das duas imagens o navegador escolherá para exibir? vamos fazer as contas.
 
-nosso media querie informa ao browser que acima de 400pacimax de largura a imagem ocupará 80% do viewport, mas estamos abaixo entao o browser sabe que a imagem deverá ocupar 100% do viewport, vejamos
+nosso media querie informa ao browser que acima de 400px de largura a imagem ocupará 80% do viewport, mas estamos abaixo então o browser sabe que a imagem deverá ocupar 100% do viewport, vejamos
 
-nossa formula: largura da imagem / (fator * (largura do device * densidade de pixels))
+Fórmula: largura da imagem / (fator * (largura do device * densidade de pixels))
 
 375 / (1*(320 * 1)) = *1.171875*  - **(375 dividido por 100% de 320 é igual a)**
 1500 / (1*(320 * 1)) = *4.6875* - **(1500 dividido por 100% de 320 é igual a)**
@@ -331,19 +345,19 @@ e se for uma tela retina? vamos fazer as contas novamente.
 375 / (1*(320 * 2)) = 0.5859375 **(375 dividido por 100% de 640 é igual a)**
 1500 / (1*(320 * 2)) = 2.34375 **(1500 dividido por 100% de 640 é igual a)**
 
-2.34 esta mais proximo de 2 do que 0.58 entao neste caso o browser fará download da segunda imagem.
+2.34 esta mais próximo de 2 do que 0.58 então neste caso o browser fará download da segunda imagem.
 
-mas e se o navegador tirver mais que 400px de largura? dissemos a ele que neste caso as imagem ocupariam 80% do viewport, vamos conferir os calculos para ver qual imagem o browser vai escolher para baixar. vamos imaginar que a largura agora é 900px e que a densidade de pixels é 1.
+Mas e se o navegador tiver mais que 400px de largura? dissemos a ele que neste caso as imagem ocupariam 80% do viewport, vamos conferir os cálculos para ver qual imagem o browser vai escolher para baixar. vamos imaginar que a largura agora é 900px e que a densidade de pixels é 1.
 
 375 / (.8*(900 * 1)) = 0.5208333333333334 **(375 dividido por 80% de 900 é igual a)**
 1500 / (.8*(900 * 1)) = 2.0833333333333335 **(1500 dividido por 80% de 900 é igual a)**
 
-neste caso 0.5 esta mais proximo da nossa densidade de pixel do que 2.08 e o browser fará download da imagem 1; Portanto para uma resoluçao de 900px de largura com densidade de 1px uma imagem de qualidade inferior será exibida, vamos corrigir isso incrementando nosso srcset. Adicionamos uma src para uma imagem com 900px de largura e informamos para o srcset que ela tem 900px de largura usando 900w no final. isso deve resolver o problema.
+Neste caso 0.5 esta mais próximo da nossa densidade de pixel do que 2.08 e o browser fará download da imagem 1; Portanto para uma resolução de 900px de largura com densidade de 1, uma imagem de qualidade inferior será exibida, vamos corrigir isso incrementando nosso srcset. Adicionamos uma src para uma imagem com 900px de largura e informamos para o srcset que ela tem 900px de largura usando 900w no final. isso deve resolver o problema.
 
 <iframe width="100%" height='265' scrolling='no' title='responsive image request example medium' src='//codepen.io/feliperohde/embed/Njgeez/?height=265&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/feliperohde/pen/Njgeez/'>responsive image request example medium</a> by Felipe Rohde (<a href='http://codepen.io/feliperohde'>@feliperohde</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
 
-mas note que agora em um navegador com largura superior a 375px e 1 de densidade o navegador baixa a imagem com 900px de largura, mas por que? definimos que o fator será de 80% apenas acima de 400px
+Note que agora em um navegador com largura superior a 375px e 1 de densidade o navegador baixa a imagem com 900px de largura, mas por que? definimos que o fator será de 80% apenas acima de 400px
 
 900 / (1*(376 * 1)) = 2.393617021276596
 375 / (1*(376 * 1)) = 0.9973404255319149
@@ -351,7 +365,7 @@ mas note que agora em um navegador com largura superior a 375px e 1 de densidade
 900 / (.8*(376 * 1)) = 2.9920212765957444
 375 / (.8*(376 * 1)) = 1.2466755319148937
 
-Acontece que o navegador tentará não fazer upscaling caso a regra corrente não seja satisfeita e haja disponível uma imagem maior para ser exibida, e isso pode ser um complicador veja:
+Acontece que o navegador tentará não fazer upscaling caso a regra corrente não seja satisfeita e haja disponível uma imagem maior para ser exibida, e isso pode ser um complicador, veja:
 
 <iframe width="100%" height='265' scrolling='no' title='responsive image request example medium' src='//codepen.io/feliperohde/embed/XRgOJJ/?height=265&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/feliperohde/pen/XRgOJJ/'>responsive image request example medium</a> by Felipe Rohde (<a href='http://codepen.io/feliperohde'>@feliperohde</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
@@ -360,9 +374,9 @@ Por isso é importante criar uma regra satisfatória ou disponibilizar uma ampla
 
 O que confunde muito aqui é que devido a forte ligaçao com css, somos de certa forma forçados a pensar que o valor do atributo sizes, definirá a largura estética da imagem quando na verdade ela somente dará uma base de calculo para o navegador escolher uma imagem, nada impede de informar ao navegador para que baixe uma imagem com fator de 80% e exibi-la no front com 100% de largura, no entando é recomendável respeitar a proporção informada visto que esse é o motivo dela existir.
 
-Tem um jeito mais fácil de aplicar isso, sem precisar elaborar ou entender todos esses cálculos malucos? sim, veja bem, é muito mais fácil setar somete o srcset para intervalos de imagens e também disponibilizar uma versão em 2x, veja:
+Tem um jeito mais fácil de aplicar isso, sem precisar elaborar ou entender todos esses cálculos malucos? sim, veja bem, é muito mais fácil setar somete o srcset para intervalos de imagens, veja:
 
-<iframe width="100%" height='265' scrolling='no' title='responsive image request example complex' src='//codepen.io/feliperohde/embed/BRZGEL/?height=265&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/feliperohde/pen/BRZGEL/'>responsive image request example complex</a> by Felipe Rohde (<a href='http://codepen.io/feliperohde'>@feliperohde</a>) on <a href='http://codepen.io'>CodePen</a>.
+<iframe width="100%" height='265' scrolling='no' title='Exemplo Mobile first - Imagens' src='//codepen.io/feliperohde/embed/mmBJzX/?height=265&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/feliperohde/pen/mmBJzX/'>Exemplo Mobile first - Imagens</a> by Felipe Rohde (<a href='http://codepen.io/feliperohde'>@feliperohde</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
 
 Também existem ferramentas para facilitar esse trabalho, uma delas se chama responsivebreakpoints, e foi criada justamente pra salvar-nos desse trabalho:
@@ -380,8 +394,6 @@ seguindo o exemplo do repositório, após implementado, nossas urls na srcset fi
 ```
 
 e assim por diante até satisfazer todos os intervalos importantes para determinada imagem.
-
-tentar fazer um codepen pra isso, problema, crossdomain
 
 ### Exibição progressiva
 No post anterior falamos da importância de exibir o conteúdo progressivamente, ou seja, ir exibindo as coisas conforme os breakpont são satisfeitos; Mas podemos ir além e fazer não só a exibição progressiva mas também fazer carregamento progressivo; É aqui que o javascript entra em cena. Suponhamos que em nosso layout de tablet algo a mais deve ser exibido, ao invéz então de já ter esse conteúdo carregado mas com display none, faremos melhor, veja:
