@@ -1,7 +1,7 @@
 
 ## Como desenvolver mobile-first
 
-O desenvolvimento mobile first ainda é motivo de pesadelos para designers e desenvolvedores; Para designers pq pensam que terão que fazer um brainstorm totalmente diferente ou que perderão parte da criação por não pensar em telas maiores e para desenvolvedor por pensar em como vai desenvolver tudo aquilo do desktop para o celular. A criação e desenvolvimento mobile-first é basicamente criar coisas de maneira progressiva ao invés de adaptar toda a parafernalha de desktops para celulares, isso sim seria doloroso, não tem haver com ignorar telas maiores ou migrar features desenvolvidas para elas, e sim pensar nas telas maiores depois.
+O desenvolvimento mobile first ainda é motivo de pesadelos para designers e desenvolvedores; Para designers pq pensam que terão que fazer um brainstorm totalmente diferente ou que perderão parte da criação por não pensar em telas maiores e para desenvolvedor por pensar em como vai desenvolver tudo aquilo do desktop para o celular. A criação e desenvolvimento mobile-first é basicamente criar coisas de maneira progressiva ao invés de adaptar toda a parafernália de desktops para celulares, isso sim seria doloroso, não tem haver com ignorar telas maiores ou migrar features desenvolvidas para elas, e sim pensar nas telas maiores depois.
 
 Ao final deste texto teremos uma pagina simples, mobile-first responsiva que poderemos ter como base para projetos no futuro, e principalmente, uma página que vamos gostar de acessar no celular.
 
@@ -17,7 +17,7 @@ Ainda há dificuldade em entender as medidas relativas para a tipografia na web,
 Medidas relativas, tem haver com o padrão do browser e o zoom, por padrão, os navegadores tem a seguinte regra: 1em = 12pt = 16px = 100%, mas nada me impede de mudar isso e setar o font-size padrão do meu browser para 18px.
 
 E isso é útil pois assim como posso trazer o jornal mais pra perto, na web posso aumentar o tamanho padrão; Dessa forma elementos com medidas relativas respeitarão a nova medida padrão do browser ao contrário de uma medida fixa em px.
-no exemplo abaixo, temos dois titulos com o mesmo tamanho, mas o que acontece se mudarmos o tamanho padrão do browser? no exemplo fazemos isso setado o font-size no html e no body.
+no exemplo abaixo, temos dois títulos com o mesmo tamanho, mas o que acontece se mudarmos o tamanho padrão do browser? no exemplo fazemos isso setado o font-size no html e no body.
 
 <iframe width="100%" height='265' scrolling='no' title='some unit example' src='//codepen.io/feliperohde/embed/gWRjXO/?height=265&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/feliperohde/pen/gWRjXO/'>some unit example</a> by Felipe Rohde (<a href='http://codepen.io/feliperohde'>@feliperohde</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
@@ -32,18 +32,18 @@ Acima! Pare de usar max-with em seus mediaqueries, não é legal; Criar interval
 Quando estamos desenvolvendo pensando em mobile-first, a principal coisa que se deve ter em mente é que as media queries devem ser sempre pensadas para resoluções **a partir de** e não **abaixo de**, mas por que?
 Se estamos desenvolvendo para o celular, façamos o código para o celular, não há motivo para criar um breakpoint para o celular sendo que ele é o principal dispositivo para o qual estamos desenvolvendo, façamos então todas as regras de estética do celular serem as regras padrão, que ficarão fora de qualquer breakpoint; Logo quando o diagramação ou conteúdo não for mais bem apresentada conforme acessamos o conteúdo em telas maiores, mapeamos isso e então vejamos a partir de qual ponto precisaremos reaver nossas regras ou incrementa-las.
 
-Use mediaqueries sempre com min-width, isso torna obrigátorio que escrevamos nosso código primeiro pra telas menores, consequentemente escrevemos um código mais limpo e simples, separamos as responsabilidades de cada breakpoint e o reaproveitamento de propriedades aumenta muito.
+Use mediaqueries sempre com min-width, isso torna obrigatório que escrevamos nosso código primeiro pra telas menores, consequentemente escrevemos um código mais limpo e simples, separamos as responsabilidades de cada breakpoint e o reaproveitamento de propriedades aumenta muito.
 
 <iframe width="100%" height='265' scrolling='no' title='Mobile first - Media queries' src='//codepen.io/feliperohde/embed/aWygLV/?height=265&theme-id=0&default-tab=css,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/feliperohde/pen/aWygLV/'>Mobile first - Media queries</a> by Felipe Rohde (<a href='http://codepen.io/feliperohde'>@feliperohde</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
 
-Uma dica também é não colocar o media querie dentro do componente, e sim o componente dentro do media querie, mas pq? Existem casos em que por exemplo, um status irá modificar  o componente; Uma classe 'is-loading' pode ser adiconada ao componente e essa classe modificará seus filhos em alguma largura, não teriamos como modificar o elemento se o media querie estivesse dentro do componente, teriamos que criar uma nova variação do componente sendo filho desse modificador de estatus e colocar o novo media querie dentro dele e isso é eliminado se o componente estiver dentro do media querie.
+Uma dica também é não colocar o media querie dentro do componente, e sim o componente dentro do media querie, mas por quê? Existem casos em que por exemplo, um status irá modificar  o componente; Uma classe 'is-loading' pode ser adicionada ao componente e essa classe modificará seus filhos em alguma largura, não teríamos como modificar o elemento se o media querie estivesse dentro do componente, teríamos que criar uma nova variação do componente sendo filho desse modificador de estatus e colocar o novo media querie dentro dele e isso é eliminado se o componente estiver dentro do media querie.
 
 <iframe width="100%" height='265' scrolling='no' title='Mobile first - Media queries' src='//codepen.io/feliperohde/embed/qmXzoY/?height=265&theme-id=0&default-tab=css,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/feliperohde/pen/qmXzoY/'>Mobile first - Media queries</a> by Felipe Rohde (<a href='http://codepen.io/feliperohde'>@feliperohde</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
 
 ### Pare de usar breakpoints para padrões de tela
-A cada dia surgem novos dispositivos com novos tamanhos e padrões de tela, em algum ponto se tornará insustentável suportar breakpoints para toda essa gama de telas, hoje são os celulares e tables, amanhã talvez as tvs ou os relógios de pulso e por que não óculus de realidade virtual? então qual a solução para ajustar o conteúdo?
+A cada dia surgem novos dispositivos com novos tamanhos e padrões de tela, em algum ponto se tornará insustentável suportar breakpoints para toda essa gama de telas, hoje são os celulares e tables, amanhã talvez as tvs ou os relógios de pulso e por que não óculos de realidade virtual? então qual a solução para ajustar o conteúdo?
 
 Os breakpoints devem ser usados para o conteúdo e não para as telas, ficou confuso? calma, os breakpoints ainda são para uma medida de tamanho de tela mas não para devices. O ponto é que devemos ter como base o nosso conteúdo, deve-se criar uma ponto de interrupção somente quando e se o conteúdo exigir; O conteúdo deve ser nosso guia para criar os breakpoints.
 
@@ -61,18 +61,18 @@ Se for fazer algum efeito, que este possa de alguma forma educar o usuário sobr
 Animar somente por animar não tem muito sentido. A animação tem que dizer algo pro usuário ou suavizar o aparecimento de um novo elemento na tela.
 
 ### Ícones
-Logo quando começamos a adaptar conteúdo para diversos tipos de tela, era muito comum usar um sprite@2x, por exemplo, para dar suporte a telas retina, mas não temos controle sobre as telas que surgirão, isso tem evoluido muito rápido, e ao menos para icones e assets que estarão sempre no nosso site, precisamos de um jeito mais consistente para exibir imagens.
+Logo quando começamos a adaptar conteúdo para diversos tipos de tela, era muito comum usar um sprite@2x, por exemplo, para dar suporte a telas retina, mas não temos controle sobre as telas que surgirão, isso tem evoluído muito rápido, e ao menos para ícones e assets que estarão sempre no nosso site, precisamos de um jeito mais consistente para exibir imagens.
 
 ![Vetor vs imagem](http://blog.froont.com/content/images/2014/11/09_Vectors-vs-Images-1.gif)
 
 O svg é uma delas, e ele tem suporte básico a partir do IE9+, sua renderização é proporcional e não interpolada como das imagens, portando não é necessário um novo svg para exibir a mesma imagem em uma tela com densidade maior ou  se simplesmente queremos exibir uma imagem maior.
 
-Os arquivos de fonte são outra forma, e para ícones é o preferido no desenvolvimento, ferramentas como **icomoon** e  **fontawesome** cairam no gosto tanto de designers quanto dos desenvolvedores.
+Os arquivos de fonte são outra forma, e para ícones é o preferido no desenvolvimento, ferramentas como **icomoon** e  **fontawesome** caíram no gosto tanto de designers quanto dos desenvolvedores.
 
 ### Fontfaces
 Já entrou em um site que aparentemente estava vazio, quando de repente, todo o conteúdo aparece; Muitas vezes isso acontece pois o conteúdo que está ali esta usando uma fonte que não é nativa.
 
-Não há problemas em carregar uma fonte para o site, desde que não seja uma dúzia, mas existe problema em não dar fallback para elementos que ussam essa nova fonte; A propriedade **font-family** do css permite que inúmeras famílias de fontes seja atribuida a ela, fazendo com que, da direita pra a esquerda o browser tente encontrar a fonte para exibir o conteúdo. Logo um elemento com font-face, principalmente se for um elemento que exibe um conteúdo, um artigo por exemplo, deve ter uma font-family de fallback, para que seja usada enquanto o browser baixa a nova fonte ou mesmo se o browser nao conseguir baixar a fonte ou não encontra-la.
+Não há problemas em carregar uma fonte para o site, desde que não seja uma dúzia, mas existe problema em não dar fallback para elementos que usam essa nova fonte; A propriedade **font-family** do css permite que inúmeras famílias de fontes seja atribuída a ela, fazendo com que, da direita pra a esquerda o browser tente encontrar a fonte para exibir o conteúdo. Logo um elemento com font-face, principalmente se for um elemento que exibe um conteúdo, um artigo por exemplo, deve ter uma font-family de fallback, para que seja usada enquanto o browser baixa a nova fonte ou mesmo se o browser não conseguir baixar a fonte ou não encontra-la.
 
 ```css
 font-family: "My awesome font", "Times New Roman", Georgia, Serif;
@@ -107,7 +107,7 @@ Sempre que a informação puder estar em uma lista, coloque-a em uma lista, apre
 É comum encontrar sites que usam segmentos ou subdomínios para servir conteúdo para dispositivos móveis. Isso geralmente acontece pois o site foi migrado para dar suporte a dispositivos móveis, então para separar o código e infraestrutura cria-se essa separação; Isso não é necessário, o usuário deve ter o sentimento de estar acessando o mesmo site e o mesmo conteúdo, esse tipo de abordagem pode gerar um pouco de insegurança quanto ao conteúdo que está sendo mostrado, não é uma má pratica mas o conteúdo móvel pode ser servido na mesma url mesmo quando este foi adaptado de um site desktop.
 
 ### Setup básico
-A maioria dos browsers móveis modernos usam uma forma de exibir sites não otimizados para dispositivos móveis, isto é, eles definem um viewport maior para o site e acomodam todo o conteúdo escalado, o usuário então pode fazer zoom na área de interesse usando os gestos nativos de seu aparelho, isso proporciona uma melhor usabilidade para sites que não são otimizados para celulares, essa forma de exibição se tornou padrão nos navegadores; Esse comportamento é otimo para conteúdo nao otimizado para celulares, mas como estamos otimizando nosso conteúdo para navegadores móveis, devemos informar a eles a largura do viewport que ele deve usar.
+A maioria dos browsers móveis modernos usam uma forma de exibir sites não otimizados para dispositivos móveis, isto é, eles definem um viewport maior para o site e acomodam todo o conteúdo escalado, o usuário então pode fazer zoom na área de interesse usando os gestos nativos de seu aparelho, isso proporciona uma melhor usabilidade para sites que não são otimizados para celulares, essa forma de exibição se tornou padrão nos navegadores; Esse comportamento é ótimo para conteúdo não otimizado para celulares, mas como estamos otimizando nosso conteúdo para navegadores móveis, devemos informar a eles a largura do viewport que ele deve usar.
 
 Para isso usamos a metatag de nome viewport; Essa tag aceita os seguintes valores em seu conteúdo:
 **width** - serve para definir a largura do viewport virtual
@@ -141,7 +141,7 @@ Outra metatag interessante é a **theme-color**, que faz com que a toolbar de de
 </iframe>
 
 ### Chamadas de assets
-Aqui, além de respeitar as boas práticas sobre como fazer as chamadas de css e js, aquilo sobre por scripts no final da página sempre que possível mantendo no head somente chamadas de assets que setam a estética inicial do site, polyfills e coisas que infuenciarão no parseamento do restante do documento.
+Aqui, além de respeitar as boas práticas sobre como fazer as chamadas de css e js, aquilo sobre por scripts no final da página sempre que possível mantendo no head somente chamadas de assets que setam a estética inicial do site, polyfills e coisas que influenciarão no parceamento do restante do documento.
 
 É interessante separar os arquivos de css para displays maiores, mas pq? Usando breakpoints responsivos podemos fazer com que somente o desktop realize alguma tarefa estetica, mas se esta regra estivar no mesmo arquivo css, mesmo que dispositivos móveis ignorem a regra, ele ainda terá que baixar o arquivo inteiro, é um questão de payload, se o device não precisa da regra ou não a interpretará ele nao deve fazer download não é?
 ```html
@@ -166,7 +166,7 @@ Já neste exemplo, podemos informar em qual proporção o script será adicionad
 ### Navegação Menus e elementos com posicionamento fixo
 Celulares tem um tamanho de tela limitado, e é comum usar um navigation drawer, hamburger menu, header fixo ou call to action fixos para facilitar o acesso a alguns links e aprimorar a navegação, mas não faça tudo de uma vez, por favor, pois o usuário só vai guardar uma referência de onde estão os links importantes.
 
-A guideline material design possui boas referências para isso, disponibilizando navigation drawer, bottom navigation, floating button e menus contextuais, cada um instiga o usuário para uma ações e comportamentos diferentes.
+A guide line material design possui boas referências para isso, disponibilizando navigation drawer, bottom navigation, floating button e menus contextuais, cada um instiga o usuário para uma ações e comportamentos diferentes.
 
 Na web é comum usar a navigation drawer para exibir uma lista de links internos uteis, como acesso aos principais pontos do site (about, trabalhos, contato) assim como links relacionados ao perfil logado (deslogar, alterar foto)
 
@@ -178,7 +178,7 @@ Em nosso exemplo, criaremos uma lista simples com link + icone e texto junto com
 ### ResponsiveUI e componentes reutilizáveis
 Desenvolvedor e designer devem estar em sintonia aqui, não é tao fácil criar um elemento gráfico que se adapte em todos os contextos, mas é preciso, pois não queremos ter esforço para adaptar a informação de um celular pra um tablet ou desktop, na verdade não queremos faze-lo; Um componente gráfico responsivo tem muita responsabilidade e ele deve diminuir ao máximo o esforço para adaptação de conteúdo entre as telas.
 
-Os cards, eles cairam no gosto, são simples, podem acomodar imagens, videos, textos, botoes... São amigáveis a gestos, agradam visualmente e mais do que isso: os usuários entendem os cards; São um ótimo exemplo de componentes visuais reutilizáveis e responsivos.
+Os cards, eles caíram no gosto, são simples, podem acomodar imagens, videos, textos, botoes... São amigáveis a gestos, agradam visualmente e mais do que isso: os usuários entendem os cards; São um ótimo exemplo de componentes visuais reutilizáveis e responsivos.
 
 Também são fácies de serem escritos.
 https://material.io/guidelines/components/cards.html
@@ -189,9 +189,9 @@ Dois componentes que podemos dizer que todo site tem, exibem desde listas de ima
 
 Navegadores móveis não exibem a barra de rolagem, ela só é exibida enquanto o evento scroll esta acontecendo.
 
-Setas são comumente usadas para informar o usuário que existem mais pra se ver, mas esse não é o unico jeito de fazer o usuário perceber a existencia de uma lista escondida em um slider; Um jeito também muito comum de fazer isso é mostrar parte do conteúdo escondido, incentivando o usuário a usar o scroll para verificar o conteúdo, claro que existe aplicaçao para os dois e temos que escolher o melhor jeito de fazer com que o usuário entendar a existencia de conteúdo extra.
+Setas são comumente usadas para informar o usuário que existem mais pra se ver, mas esse não é o único jeito de fazer o usuário perceber a existência de uma lista escondida em um slider; Um jeito também muito comum de fazer isso é mostrar parte do conteúdo escondido, incentivando o usuário a usar o scroll para verificar o conteúdo, claro que existe aplicação para os dois e temos que escolher o melhor jeito de fazer com que o usuário entender a existência de conteúdo extra.
 
-Também depende de layout e diagramaçao, um hero slider por examplo é muito melhor apresentado quando ocupa toda a largura da tela, entao nesta caso, o uso das setas vem a calhar; Já em uma listagem de produtos ou produtos relacionados a exibiçao parcial do proximo item se torna mais interessante e deixa a interface mais limpa para o que é importante, o produto; Pode-se ainda instruir o usuário da existencia de conteúdo extra utilizando uma animação que exemplifique o comportamento.
+Também depende de layout e diagramação, um hero slider por exemplo é muito melhor apresentado quando ocupa toda a largura da tela, então nesta caso, o uso das setas vem a calhar; Já em uma listagem de produtos ou produtos relacionados a exibição parcial do próximo item se torna mais interessante e deixa a interface mais limpa para o que é importante, o produto; Pode-se ainda instruir o usuário da existência de conteúdo extra utilizando uma animação que exemplifique o comportamento.
 
 <iframe height='265' scrolling='no' title='Exemplo Mobile first - Sliders e carrouseis' src='//codepen.io/feliperohde/embed/MmvrQq/?height=265&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/feliperohde/pen/MmvrQq/'>Exemplo Mobile first - Sliders e carrouseis</a> by Felipe Rohde (<a href='http://codepen.io/feliperohde'>@feliperohde</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
@@ -209,10 +209,10 @@ No exemplo acima, adicionamos um simples evento de longpress nos itens da nossa 
 <iframe weidth="100%" height='265' scrolling='no' title='Exemplo Mobile first - Gestos e ações' src='//codepen.io/feliperohde/embed/oWGjEy/?height=265&theme-id=0&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/feliperohde/pen/oWGjEy/'>Exemplo Mobile first - Gestos e ações</a> by Felipe Rohde (<a href='http://codepen.io/feliperohde'>@feliperohde</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
 
-Já neste exempo, aproveitamos o scroll da lista para simular o gesto "pan" dos celulares, parecido com swipe.
+Já neste exemplo, aproveitamos o scroll da lista para simular o gesto "pan" dos celulares, parecido com swipe.
 
 ### Os links
-Exitem algumas pequenas mudanças em links que podem melhorar a experiência para o usuário que nevega pelo seu smartphone; O browser disponibiliza algumas formas de interação mais intima com o aparelho, links de telefone e até mesmo links para aplicativos instalados. parece pouco mas faz diferença.
+Exitem algumas pequenas mudanças em links que podem melhorar a experiência para o usuário que navega pelo seu smartphone; O browser disponibiliza algumas formas de interação mais intima com o aparelho, links de telefone e até mesmo links para aplicativos instalados. parece pouco mas faz diferença.
 
 Podemos fazer uma chamada para o discador do smartphone simplesmente criando um link como esse:
 
@@ -235,16 +235,21 @@ extra: O seo desta para este tipo de informação pode ser otimizado para que qu
 https://css-tricks.com/the-current-state-of-telephone-links/
 
 De forma muito semelhante podemos chamar o app do whatsApp desta forma:
-<a href="whatsapp://send?text=Hello World!&phone=+9198********1">wpp</a>
-Esse link pode ser usado para compartilhar informaçao atravéz do wpp, é incomum usar o parametro phone pois o wpp somente funciona com os contatos que o usuário tem no celular, não sendo possível que um link para uma conversa de um contato inexistente na lista pessoal funcione.
 
-Links para email também são muito uteis, e ja é possivel através do link passar parametros para o preenchimento do formulario de envio de email:
+```html
+<a href="whatsapp://send?text=Hello World!&phone=+9198********1">wpp</a>
+```
+Esse link pode ser usado para compartilhar informação através do wpp, é incomum usar o parâmetro phone pois o wpp somente funciona com os contatos que o usuário tem no celular, não sendo possível que um link para uma conversa de um contato inexistente na lista pessoal funcione.
+
+Links para email também são muito uteis, e ja é possível através do link passar parametros para o preenchimento do formulario de envio de email:
+
+```html
  <a href="mailto:someone@yoursite.com?cc=someoneelse@theirsite.com, another@thatsite.com, me@mysite.com&bcc=lastperson@theirsite.com&subject=Big%20News&body=Body-goes-here">Email Us</a>
- Desta forma, o app encarregado por envios de email no celular será chamado e automaticamente os campos informados ja estrão preenchidos para o usuário, lindo!
+```
+ Desta forma, o app encarregado por envios de email no celular será chamado e automaticamente os campos informados já estarão preenchidos para o usuário, lindo!
 
 ### Os inputs
-http://bradfrost.com/blog/mobile/better-numerical-inputs-for-mobile-forms/
-Ainda é comum encontrar formulários cheios de input text, input text pra todo tipo de informação; Problema disso não é nem a liberdade de o usuário poder digitar qualquer coisa no campo, a ideia de usar os input types adequados não é a validação e sim o conforto do contexto; Todos os browsers modernos possúem suporte para os input types mais conhecidos, disponibilizando para o usuário um teclado contextual muito mais adequado para o tipo de informação que deve ser inserida, isso é **incrível**.
+Ainda é comum encontrar formulários cheios de input text, input text pra todo tipo de informação; Problema disso não é nem a liberdade de o usuário poder digitar qualquer coisa no campo, a ideia de usar os input types adequados não é a validação e sim o conforto do contexto; Todos os browsers modernos possuem suporte para os input types mais conhecidos, disponibilizando para o usuário um teclado contextual muito mais adequado para o tipo de informação que deve ser inserida, isso é **incrível**.
 
 ```html
   <!--   html inputs -->
@@ -274,10 +279,11 @@ Um atributo que pode melhorar a experiencia é o **autocapitalize**, que como o 
  <input type="text" id="initials" autocapitalize="characters">
  <textarea id="todolist" autocapitalize="sentences">
 ```
+http://bradfrost.com/blog/mobile/better-numerical-inputs-for-mobile-forms/
 
 ### Selects e elementos personalizados
-Semelhante as máscaras, gosto de pensar que selects padrao iram satisfazer a todos os usuários, ja um select personalizado pode deixar alguém irritado.
-Um dos maiores problemas de selects personalizados em dispositivos móveis é que eles tiram o comportamento padrão do elemento quando deveriam somente mudar a estética; Cada sistema operacional trabalha de uma maneira diferente para mostar a lista de um select e os usuários estao acostumados com isso e esperam qua isso funcione; No IOS por exemplo, quando clico em um select o sistema operacional mostra uma lista, semelhante ao bottom sheet do android, disponibilizando sempre a informaçao do select neste padrão, isso é prático e fácil de usar, alem disso, esperamos que funcione assim, pois todo o ecossistema envolta funciona assim.
+Semelhante as máscaras, gosto de pensar que selects padrão iram satisfazer a todos os usuários, já um select personalizado pode deixar alguém irritado.
+Um dos maiores problemas de selects personalizados em dispositivos móveis é que eles tiram o comportamento padrão do elemento quando deveriam somente mudar a estética; Cada sistema operacional trabalha de uma maneira diferente para mostrar a lista de um select e os usuários estão acostumados com isso e esperam que isso funcione; No IOS por exemplo, quando clico em um select o sistema operacional mostra uma lista, semelhante ao bottom sheet do android, disponibilizando sempre a informação do select neste padrão, isso é prático e fácil de usar, alem disso, esperamos que funcione assim, pois todo o ecossistema envolta funciona assim.
 
 A aparência estética de um select, input, input radio ou checkbox podem ser alteradas com css. Existem atributos nativos que permitem seleção de datas e horários.
 
@@ -285,11 +291,12 @@ Um comportamento extra pode ser adicionado desde que não remova um comportament
 
 ### Quanto as máscaras?
 Gosto de pensar que um input sem máscara nunca irá prejudicar ninguém enquanto que um input mascarado sem dúvida deixará uma parte dos usuários desconfortável e por vezes os impossibilitará de inserir a informação, fazendo-os desistirem do preenchimento.
-Máscaras tem a função de instruir o usuário sobre a forma de preenchimento do input e também formatar a informação que está sendo inserida; Problema é que o usuário não sabe se tem que inserir a informaçao de acordo com o placeholder da máscara ou se ela o fará automaticamente; Alguns usuários gostam de digitar a pontuaçao e a máscara remove, tornando o compartamento confuso pois não se sabe se algo deu errado;
+
+Máscaras tem a função de instruir o usuário sobre a forma de preenchimento do input e também formatar a informação que está sendo inserida; Problema é que o usuário não sabe se tem que inserir a informação de acordo com o placeholder da máscara ou se ela o fará automaticamente; Alguns usuários gostam de digitar a pontuação e a máscara remove, tornando o comportamento confuso pois não se sabe se algo deu errado;
 
 O usuário não deve precisar aprender a usar um input, ele só precisa poder digitar.
 
-Existem muitos plugins de mascaramento, além dos kbites a mais que será necessário que o usário baixe, esses plugins mudam muitos comportamentos nativos dos campos fazendo com que o usuário tenha que reaprender o funcionamento.
+Existem muitos plugins de mascaramento, além dos kbites a mais que será necessário que o usuário baixe, esses plugins mudam muitos comportamentos nativos dos campos fazendo com que o usuário tenha que reaprender o funcionamento.
 
 A instrução de como formatar um input devem estar no atributo placeholder e a formatação para melhor leitura pode ser feita depois que termina-se o preenchimento, no evento blur do input.
 
@@ -300,23 +307,21 @@ Inputs ja suportam o atributo pattern, que apesar de não atuar como máscara, d
 
 Alertas continuam sendo úteis e não tente transformar um alerta em uma modal, existe um componente nativo no sistema operacional do celular para isso com o qual nosso querido usuário já está habituado;
 
-A estética deve se diferente também, a tela é pequena e devemos aproveita-la ao máximo, uma modal no celurar vai parecer uma nova tela, podemos usar um gesto de swipeDown para fecha-la e uma transição pode dar instrução ao usuário de que aquilo é uma modal e não uma nova página.
+A estética deve se diferente também, a tela é pequena e devemos aproveita-la ao máximo, uma modal no celular vai parecer uma nova tela, podemos usar um gesto de swipeDown para fecha-la e uma transição pode dar instrução ao usuário de que aquilo é uma modal e não uma nova página.
 
 <iframe width="100%" height='265' scrolling='no' title='Exemplo Mobile first - Modal' src='//codepen.io/feliperohde/embed/EmQrPL/?height=265&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/feliperohde/pen/EmQrPL/'>Exemplo Mobile first - Modal</a> by Felipe Rohde (<a href='http://codepen.io/feliperohde'>@feliperohde</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
 
 ### Imagens
-http://www.responsivebreakpoints.com/
-
 Um dos fatores cruciais em um site é o tempo de carregamento e as imagens tem muita responsabilidade neste ponto, portanto, é importante disponibilizar a imagem certa.
 
-Durante muito tempo isso foi um trabalho árduo, felizmente a web evolui rapido e hoje temos o atributo **srcset** nas imagens, esse atributo permite que coloquemos um pouquinho de regra para que o navegador escolha a url de onde baixar o arquivo.
+Durante muito tempo isso foi um trabalho árduo, felizmente a web evolui rápido e hoje temos o atributo **srcset** nas imagens, esse atributo permite que coloquemos um pouquinho de regra para que o navegador escolha a url de onde baixar o arquivo.
 
 o jeito mais simples de uso é esse:
 <iframe width='100%' height='265' scrolling='no' title='responsive image request example simple' src='//codepen.io/feliperohde/embed/VbWqYw/?height=265&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/feliperohde/pen/VbWqYw/'>responsive image request example simple</a> by Felipe Rohde (<a href='http://codepen.io/feliperohde'>@feliperohde</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
 
-Basicamente mantemos o atributo src como fallback e adiconamos duas urls no atributo srcset separadas por virgula, note que ao final de cada url existe um modifiador **1x** ou **2x** separado com um espaço da url; Isso diz ao browser que a url descrita com o modificador 1x deve ser usada quando a densidade de pixels for 1, e a 2x quando for 2 no caso de dispositivos retina.
+Basicamente mantemos o atributo src como fallback e adicionamos duas urls no atributo srcset separadas por virgula, note que ao final de cada url existe um modificador **1x** ou **2x** separado com um espaço da url; Isso diz ao browser que a url descrita com o modificador 1x deve ser usada quando a densidade de pixels for 1, e a 2x quando for 2 no caso de dispositivos retina.
 
 Mas podemos ir muito mais alem, fazendo srcsets mais elaborados em conjunto com o atributo **sizes**. Esse atributo esta diretamente ligado com o css, e nos permite fazer mediaqueries para nossos sources, veja:
 
@@ -324,7 +329,7 @@ Mas podemos ir muito mais alem, fazendo srcsets mais elaborados em conjunto com 
 sizes="(min-width: 400px) 80vw, 100vw"
 ```
 
-com isso estamos informando ao browser que em resoluçoes acima de 400px a imagem ocupará 80% do viewport, caso contrário ela ocupará 100% do viewport. Vale lembrar que isso não dita regra estética, somente para escolha de source.
+com isso estamos informando ao browser que em resoluções acima de 400px a imagem ocupará 80% do viewport, caso contrário ela ocupará 100% do viewport. Vale lembrar que isso não dita regra estética, somente para escolha de source.
 
 <iframe width="100%" height='265' scrolling='no' title='responsive image request example medium' src='//codepen.io/feliperohde/embed/RVgEpR/?height=178&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/feliperohde/pen/RVgEpR/'>responsive image request example medium</a> by Felipe Rohde (<a href='http://codepen.io/feliperohde'>@feliperohde</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
@@ -336,13 +341,15 @@ nosso media querie informa ao browser que acima de 400px de largura a imagem ocu
 Fórmula: largura da imagem / (fator * (largura do device * densidade de pixels))
 
 375 / (1*(320 * 1)) = *1.171875*  - **(375 dividido por 100% de 320 é igual a)**
+
 1500 / (1*(320 * 1)) = *4.6875* - **(1500 dividido por 100% de 320 é igual a)**
 
-1.17 está mais proximo de 1 (que é a nossa densidade de pixels) entao  para dispositivos com largura de 320px que acessao esta imagem, o navegador fará o download da primeira imagem
+1.17 está mais próximo de 1 (que é a nossa densidade de pixels) então para dispositivos com largura de 320px que acessão esta imagem, o navegador fará o download da primeira imagem
 
 e se for uma tela retina? vamos fazer as contas novamente.
 
 375 / (1*(320 * 2)) = 0.5859375 **(375 dividido por 100% de 640 é igual a)**
+
 1500 / (1*(320 * 2)) = 2.34375 **(1500 dividido por 100% de 640 é igual a)**
 
 2.34 esta mais próximo de 2 do que 0.58 então neste caso o browser fará download da segunda imagem.
@@ -350,6 +357,7 @@ e se for uma tela retina? vamos fazer as contas novamente.
 Mas e se o navegador tiver mais que 400px de largura? dissemos a ele que neste caso as imagem ocupariam 80% do viewport, vamos conferir os cálculos para ver qual imagem o browser vai escolher para baixar. vamos imaginar que a largura agora é 900px e que a densidade de pixels é 1.
 
 375 / (.8*(900 * 1)) = 0.5208333333333334 **(375 dividido por 80% de 900 é igual a)**
+
 1500 / (.8*(900 * 1)) = 2.0833333333333335 **(1500 dividido por 80% de 900 é igual a)**
 
 Neste caso 0.5 esta mais próximo da nossa densidade de pixel do que 2.08 e o browser fará download da imagem 1; Portanto para uma resolução de 900px de largura com densidade de 1, uma imagem de qualidade inferior será exibida, vamos corrigir isso incrementando nosso srcset. Adicionamos uma src para uma imagem com 900px de largura e informamos para o srcset que ela tem 900px de largura usando 900w no final. isso deve resolver o problema.
@@ -360,9 +368,11 @@ Neste caso 0.5 esta mais próximo da nossa densidade de pixel do que 2.08 e o br
 Note que agora em um navegador com largura superior a 375px e 1 de densidade o navegador baixa a imagem com 900px de largura, mas por que? definimos que o fator será de 80% apenas acima de 400px
 
 900 / (1*(376 * 1)) = 2.393617021276596
+
 375 / (1*(376 * 1)) = 0.9973404255319149
 
 900 / (.8*(376 * 1)) = 2.9920212765957444
+
 375 / (.8*(376 * 1)) = 1.2466755319148937
 
 Acontece que o navegador tentará não fazer upscaling caso a regra corrente não seja satisfeita e haja disponível uma imagem maior para ser exibida, e isso pode ser um complicador, veja:
@@ -372,7 +382,7 @@ Acontece que o navegador tentará não fazer upscaling caso a regra corrente nã
 
 Por isso é importante criar uma regra satisfatória ou disponibilizar uma ampla gama de imagens com pequenos intervalos.
 
-O que confunde muito aqui é que devido a forte ligaçao com css, somos de certa forma forçados a pensar que o valor do atributo sizes, definirá a largura estética da imagem quando na verdade ela somente dará uma base de calculo para o navegador escolher uma imagem, nada impede de informar ao navegador para que baixe uma imagem com fator de 80% e exibi-la no front com 100% de largura, no entando é recomendável respeitar a proporção informada visto que esse é o motivo dela existir.
+O que confunde muito aqui é que devido a forte ligação com css, somos de certa forma forçados a pensar que o valor do atributo sizes, definirá a largura estética da imagem quando na verdade ela somente dará uma base de calculo para o navegador escolher uma imagem, nada impede de informar ao navegador para que baixe uma imagem com fator de 80% e exibi-la no front com 100% de largura, no entanto é recomendável respeitar a proporção informada visto que esse é o motivo dela existir.
 
 Tem um jeito mais fácil de aplicar isso, sem precisar elaborar ou entender todos esses cálculos malucos? sim, veja bem, é muito mais fácil setar somete o srcset para intervalos de imagens, veja:
 
@@ -396,7 +406,7 @@ seguindo o exemplo do repositório, após implementado, nossas urls na srcset fi
 e assim por diante até satisfazer todos os intervalos importantes para determinada imagem.
 
 ### Exibição progressiva
-No post anterior falamos da importância de exibir o conteúdo progressivamente, ou seja, ir exibindo as coisas conforme os breakpont são satisfeitos; Mas podemos ir além e fazer não só a exibição progressiva mas também fazer carregamento progressivo; É aqui que o javascript entra em cena. Suponhamos que em nosso layout de tablet algo a mais deve ser exibido, ao invéz então de já ter esse conteúdo carregado mas com display none, faremos melhor, veja:
+No post anterior falamos da importância de exibir o conteúdo progressivamente, ou seja, ir exibindo as coisas conforme os breakpont são satisfeitos; Mas podemos ir além e fazer não só a exibição progressiva mas também fazer carregamento progressivo; É aqui que o javascript entra em cena. Suponhamos que em nosso layout de tablet algo a mais deve ser exibido, ao invés então de já ter esse conteúdo carregado mas com display none, faremos melhor, veja:
 
 <iframe width="100%" height='265' scrolling='no' title='dWRaNR' src='//codepen.io/feliperohde/embed/dWRaNR/?height=265&theme-id=0&default-tab=css,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/feliperohde/pen/dWRaNR/'>dWRaNR</a> by Felipe Rohde (<a href='http://codepen.io/feliperohde'>@feliperohde</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
