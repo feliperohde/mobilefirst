@@ -1,7 +1,6 @@
-
 ## Como desenvolver mobile-first
 
-O desenvolvimento mobile first ainda é motivo de pesadelos para designers e desenvolvedores; Para designers pq pensam que terão que fazer um brainstorm totalmente diferente ou que perderão parte da criação por não pensar em telas maiores e para desenvolvedor por pensar em como vai desenvolver tudo aquilo do desktop para o celular.
+O desenvolvimento mobile first ainda é motivo de pesadelos para designers e desenvolvedores; Para designers porque pensam que terão que fazer um brainstorm totalmente diferente ou que perderão parte da criação por não pensar em telas maiores e para desenvolvedor por pensar em como vai desenvolver tudo aquilo do desktop para o celular.
 
 A criação e desenvolvimento mobile-first é basicamente criar coisas de maneira progressiva ao invés de adaptar toda a parafernália de desktops para celulares, isso sim seria doloroso, não tem haver com ignorar telas maiores ou migrar features desenvolvidas para elas, e sim pensar nas telas maiores depois.
 
@@ -19,7 +18,7 @@ Ainda há dificuldade em entender as medidas relativas para a tipografia na web,
 Medidas relativas, tem haver com o padrão do browser e o zoom, por padrão, os navegadores tem a seguinte **regra: 1em = 12pt = 16px = 100%**, mas nada me impede de mudar isso e setar o font-size padrão do meu browser para 18px.
 
 E isso é útil pois assim como posso trazer o jornal mais pra perto, na web posso aumentar o tamanho padrão; Dessa forma elementos com medidas relativas respeitarão a nova medida padrão do browser ao contrário de uma medida fixa em px.
-no exemplo abaixo, temos dois títulos com o mesmo tamanho, mas o que acontece se mudarmos o tamanho padrão do browser? no exemplo fazemos isso setado o font-size no html e no body.
+No exemplo abaixo, temos dois títulos com o mesmo tamanho, mas o que acontece se mudarmos o tamanho padrão do browser? no exemplo fazemos isso setando o font-size no html e no body.
 
 <iframe width="100%" height='265' scrolling='no' title='some unit example' src='//codepen.io/feliperohde/embed/gWRjXO/?height=265&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/feliperohde/pen/gWRjXO/'>some unit example</a> by Felipe Rohde (<a href='http://codepen.io/feliperohde'>@feliperohde</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
@@ -49,7 +48,7 @@ A cada dia surgem novos dispositivos com novos tamanhos e padrões de tela, em a
 
 Os breakpoints devem ser usados para o conteúdo e não para as telas, ficou confuso? calma, os breakpoints ainda são para uma medida de tamanho de tela mas não para devices. O ponto é que devemos ter como base o nosso conteúdo, deve-se criar uma ponto de interrupção somente quando e se o conteúdo exigir; O conteúdo deve ser nosso guia para criar os breakpoints.
 
-Um breakpoint para um device especifico se justifica quando devo exibir para este device alguma feature ou facilitador com o qual ele esta acostumando naquele contexto.
+Um breakpoint para um device especifico se justifica quando devo exibir para este device alguma feature ou facilitador com o qual o usuário esta acostumando naquele contexto.
 
 ### Use medidas relativas também para os media queries
 Assim como as medidas de fontes, as medidas para media queries devem ser relativas, visto que o usuário pode querer dar zoom no conteúdo, um conteúdo com zoom pode ser adaptado e ter uma visualização ainda melhor...
@@ -69,7 +68,7 @@ Logo quando começamos a adaptar conteúdo para diversos tipos de tela, era muit
 
 O svg é uma delas, e ele tem suporte básico a partir do IE9+, sua renderização é proporcional e não interpolada como das imagens, portando não é necessário um novo svg para exibir a mesma imagem em uma tela com densidade maior ou  se simplesmente queremos exibir uma imagem maior.
 
-Os arquivos de fonte são outra forma, e para ícones é o preferido no desenvolvimento, ferramentas como **icomoon** e  **fontawesome** caíram no gosto tanto de designers quanto dos desenvolvedores.
+Os arquivos de fonte são outra forma, e para ícones é o preferido no desenvolvimento, ferramentas como **[icomoon](https://icomoon.io/)** e  **[fontawesome](http://fontawesome.io/)** caíram no gosto tanto de designers quanto dos desenvolvedores.
 
 ### Fontfaces
 Já entrou em um site que aparentemente estava vazio, quando de repente, todo o conteúdo aparece; Muitas vezes isso acontece pois o conteúdo que está ali esta usando uma fonte que não é nativa.
@@ -151,7 +150,7 @@ Outra metatag interessante é a **theme-color**, que faz com que a toolbar de de
 ### Chamadas de assets
 Aqui, além de respeitar as boas práticas sobre como fazer as chamadas de css e js, aquilo sobre por scripts no final da página sempre que possível mantendo no head somente chamadas de assets que setam a estética inicial do site, polyfills e coisas que influenciarão no parceamento do restante do documento.
 
-É interessante separar os arquivos de css para displays maiores, mas pq? Usando breakpoints responsivos podemos fazer com que somente o desktop realize alguma tarefa estetica, mas se esta regra estivar no mesmo arquivo css, mesmo que dispositivos móveis ignorem a regra, ele ainda terá que baixar o arquivo inteiro, é um questão de payload, se o device não precisa da regra ou não a interpretará ele nao deve fazer download não é?
+É interessante separar os arquivos de css para displays maiores, mas porquê? Usando breakpoints responsivos podemos fazer com que somente o desktop realize alguma tarefa estética, mas se esta regra estivar no mesmo arquivo css, mesmo que dispositivos móveis ignorem a regra, ele ainda terá que baixar o arquivo inteiro, é um questão de payload, se o device não precisa da regra ou não a interpretará ele não deve fazer download não é?
 
 ```html
 <link rel="stylesheet" type="text/css" href="style.css" media="screen, handheld" />
@@ -172,12 +171,12 @@ Neste exemplo simples, verifica-se se o evento **ontouchstart** está disponíve
 
 Já neste exemplo, podemos informar em qual proporção o script será adicionado.
 
-### Navegação Menus e elementos com posicionamento fixo
+### Navegação, menus e elementos com posicionamento fixo
 Devido ao tamanho limitado dos celulares, é comum usar um navigation drawer, hamburger menu, header fixo ou call to action fixos para facilitar o acesso a alguns links e aprimorar a navegação, mas não faça tudo de uma vez, por favor, pois o usuário só vai guardar uma referência de onde estão os links importantes.
 
-A guide line material design possui boas referências para isso, disponibilizando navigation drawer, bottom navigation, floating button e menus contextuais, cada um instiga o usuário para uma ações e comportamentos diferentes.
+A guide line material design possui boas referências para isso, disponibilizando navigation drawer, bottom navigation, floating button e menus contextuais, cada um instiga o usuário para uma ação e comportamentos diferentes.
 
-Na web é comum usar a navigation drawer para exibir uma lista de links internos uteis, como acesso aos principais pontos do site (about, trabalhos, contato) assim como links relacionados ao perfil logado (deslogar, alterar foto)
+Na web é comum usar a navigation drawer para exibir uma lista de links internos úteis, como acesso aos principais pontos do site (about, trabalhos, contato) assim como links relacionados ao perfil logado (deslogar, alterar foto)
 
 Em nosso exemplo, criaremos uma lista simples com link + icone e texto junto com um botão flutuante para chamar esse menu e inicialmente ficará off-canvas.
 
@@ -187,7 +186,7 @@ Em nosso exemplo, criaremos uma lista simples com link + icone e texto junto com
 ### ResponsiveUI e componentes reutilizáveis
 Desenvolvedor e designer devem estar em sintonia aqui, não é tao fácil criar um elemento gráfico que se adapte em todos os contextos, mas é preciso, pois não queremos ter esforço para adaptar a informação de um celular pra um tablet ou desktop, na verdade não queremos faze-lo; Um componente gráfico responsivo tem muita responsabilidade e ele deve diminuir ao máximo o esforço para adaptação de conteúdo entre as telas.
 
-Os cards, eles caíram no gosto, são simples, podem acomodar imagens, videos, textos, botoes... São amigáveis a gestos, agradam visualmente e mais do que isso: os usuários entendem os cards; São um ótimo exemplo de componentes visuais reutilizáveis e responsivos.
+Os cards, eles caíram no gosto, são simples, podem acomodar imagens, videos, textos, botões... São amigáveis a gestos, agradam visualmente e mais do que isso: **os usuários entendem os cards**; São um ótimo exemplo de componentes visuais reutilizáveis e responsivos.
 
 Além disso, são fácies de serem escritos.
 https://material.io/guidelines/components/cards.html
@@ -198,9 +197,9 @@ Dois componentes que podemos dizer que todo site tem, exibem desde listas de ima
 
 **Navegadores móveis não exibem a barra de rolagem**, ela só é exibida enquanto o evento scroll esta acontecendo.
 
-Setas e bolinhas são comumente usadas para informar o usuário que existem mais pra se ver, mas esse não é o único jeito de fazer o usuário perceber a existência de uma lista escondida em um slider; Um jeito também muito comum de fazer isso é mostrar parte do conteúdo escondido, incentivando o usuário a usar o scroll para verificar o conteúdo, claro que existe aplicação para os dois e temos que escolher o melhor jeito de fazer com que o usuário entender a existência de conteúdo extra.
+Setas e bolinhas são comumente usadas para informar o usuário que existe mais pra se ver, mas esse não é o único jeito de fazer o usuário perceber a existência de uma lista escondida em um slider; Um jeito também muito comum de fazer isso é mostrar parte do conteúdo escondido, incentivando o usuário a usar o scroll para verificar o conteúdo, claro que existe aplicação para os dois e temos que escolher o melhor jeito de fazer com que o usuário entender a existência de conteúdo extra.
 
-Também depende de layout e diagramação, um hero slider por exemplo é muito melhor apresentado quando ocupa toda a largura da tela, então nesta caso, o uso das setas vem a calhar; Já em uma listagem de produtos ou produtos relacionados a exibição parcial do próximo item se torna mais interessante e deixa a interface mais limpa para o que é importante, o produto; Pode-se ainda instruir o usuário da existência de conteúdo extra utilizando uma animação que exemplifique o comportamento.
+Também depende de layout e diagramação, um hero slider por exemplo é muito melhor apresentado quando ocupa toda a largura da tela, então neste caso, o uso das setas vem a calhar; Já em uma listagem de produtos ou produtos relacionados a exibição parcial do próximo item se torna mais interessante e deixa a interface mais limpa para o que é importante, o produto; Pode-se ainda instruir o usuário da existência de conteúdo extra utilizando uma animação que exemplifique o comportamento.
 
 <iframe height='265' scrolling='no' title='Exemplo Mobile first - Sliders e carrouseis' src='//codepen.io/feliperohde/embed/MmvrQq/?height=265&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/feliperohde/pen/MmvrQq/'>Exemplo Mobile first - Sliders e carrouseis</a> by Felipe Rohde (<a href='http://codepen.io/feliperohde'>@feliperohde</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
@@ -294,7 +293,7 @@ Um atributo que pode melhorar a experiencia é o **autocapitalize**, que como o 
 ### Quanto as máscaras?
 Gosto de pensar que um input sem máscara nunca irá prejudicar ninguém enquanto que um input mascarado sem dúvida deixará uma parte dos usuários desconfortável e por vezes os impossibilitará de inserir a informação, fazendo-os desistirem do preenchimento.
 
-Máscaras tem a função de instruir o usuário sobre a forma de preenchimento do input e também formatar a informação que está sendo inserida; Problema é que o usuário não sabe se tem que inserir a informação de acordo com o placeholder da máscara ou se ela o fará automaticamente; Alguns usuários gostam de digitar a pontuação e a máscara remove, tornando o comportamento confuso pois não se sabe se algo deu errado;
+Máscaras tem a função de instruir o usuário sobre a forma de preenchimento do input e também formatar a informação que está sendo inserida; Problema é que o usuário não sabe se tem que inserir a informação de acordo com o placeholder da máscara ou se ela o fará automaticamente; Alguns usuários gostam de digitar a pontuação e a máscara remove, tornando o comportamento confuso pois não se sabe se algo deu errado.
 
 **O usuário não deve precisar aprender a usar um input**, ele só precisa poder digitar.
 
@@ -316,9 +315,9 @@ Um comportamento extra pode ser adicionado desde que não remova um comportament
 ### Modais e alertas
 É preciso ter cuidado com esses dois elementos, a informação tem que ser muito importante para estar em uma modal e mais ainda para estar em um alerta e o mais importante, não abra modais se o usuário não pedir.
 
-Alertas continuam sendo úteis e não tente transformar um alerta em uma modal, existe um componente nativo no sistema operacional do celular para isso com o qual nosso querido usuário já está habituado;
+Alertas continuam sendo úteis e não tente transformar um alerta em uma modal, existe um componente nativo no sistema operacional do celular para isso com o qual nosso querido usuário já está habituado.
 
-A estética deve se diferente também, a tela é pequena e devemos aproveita-la ao máximo, uma modal no celular vai parecer uma nova tela, podemos usar um gesto de swipeDown para fecha-la e uma transição pode dar instrução ao usuário de que aquilo é uma modal e não uma nova página.
+A estética para uma modal deve se diferente, a tela é pequena e devemos aproveita-la ao máximo, uma modal no celular vai parecer uma nova tela, podemos usar um gesto de swipeDown para fecha-la e uma transição pode dar instrução ao usuário de que aquilo é uma modal e não uma nova página.
 
 <iframe width="100%" height='265' scrolling='no' title='Exemplo Mobile first - Modal' src='//codepen.io/feliperohde/embed/EmQrPL/?height=265&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/feliperohde/pen/EmQrPL/'>Exemplo Mobile first - Modal</a> by Felipe Rohde (<a href='http://codepen.io/feliperohde'>@feliperohde</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
@@ -403,7 +402,7 @@ Tem um jeito mais fácil de aplicar isso, sem precisar elaborar ou entender todo
 Também existem ferramentas para facilitar esse trabalho, uma delas se chama responsivebreakpoints, e foi criada justamente pra salvar-nos desse trabalho:
 http://www.responsivebreakpoints.com/
 
-Agora também temos que ter uma pequena infraestrutura para servir toda essa gama de imagens, para isso precisamos de algum endpoint que me devolva imagens redimensionadas para os formatos que preciso, sem precisar, claro, fazer upload de todos esses formatos e sim somente da maior imagem; O thumbor ( http://thumbor.org/) é um otimo canditado para isso, é facil de integrar e existem receitas prontas para subir containers docker com ele, como esta, disponibilizada no github:
+Agora também temos que ter uma pequena infraestrutura para servir toda essa gama de imagens, para isso precisamos de algum endpoint que me devolva imagens redimensionadas para os formatos que precisamos, sem precisar, claro, fazer upload de todos esses formatos e sim somente da maior imagem; O thumbor ( http://thumbor.org/) é um ótimo canditado para isso, é facil de integrar e existem receitas prontas para subir containers docker com ele, como esta, disponibilizada no github:
 https://github.com/APSL/docker-thumbor
 
 seguindo o exemplo do repositório, após implementado, nossas urls na srcset ficariam assim:
@@ -422,9 +421,9 @@ No post anterior falamos da importância de exibir o conteúdo progressivamente,
 <iframe width="100%" height='265' scrolling='no' title='dWRaNR' src='//codepen.io/feliperohde/embed/dWRaNR/?height=265&theme-id=0&default-tab=css,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/feliperohde/pen/dWRaNR/'>dWRaNR</a> by Felipe Rohde (<a href='http://codepen.io/feliperohde'>@feliperohde</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
 
-Neste exemplo simples, ao atingir 40em de proporção horizontal, o device mostra uma div e também inicia um request ajax carregando conteúdo extra para aquela div; Isso poder ser muito útil quando queremos incrementar o conteúdo para um dispositivo com mais capacidade, no nosso caso, somente carregamos uma imagem a mais, mas poderia ser uma galeria, videos relacionados ou artigos do mesmo autor.
+Neste exemplo simples, ao atingir 20em de proporção horizontal, o device mostra uma div e também inicia um request ajax carregando conteúdo extra para aquela div; Isso poder ser muito útil quando queremos incrementar o conteúdo para um dispositivo com mais capacidade, no nosso caso, somente carregamos uma imagem a mais, mas poderia ser uma galeria, videos relacionados ou artigos do mesmo autor.
 
 ### Conclusão
-Até mesmo ferramentas automatizadas como wix, ux.pin e squarespace já estão sendo capazes de criar bons exemplos de paginas mobile-first responsivas, mostrando que é possível vencer essa etapa sem sofrimento e sem perda de brainstorm.
+Até mesmo ferramentas como wix, ux.pin e squarespace já estão sendo capazes de criar bons exemplos de paginas mobile-first responsivas, mostrando que é possível vencer essa etapa sem sofrimento e sem perda de brainstorm.
 
-Ferramentas como essas estão lentamente removendo desenvolvedores que não se preocupam com isso do mercado; Pessoas e empresas que se preocupam com mobile-first só farão ferramentas assim evoluir e surgir novas, sempre com o foco no querido usuário. A receita não é perfeita e sempre haverá espaço para melhorar esse conceito e também essas ferramentas, esperamos que, assim como nós (rs), você também se preocupe com a maneira que o usuário acessa seu conteúdo.
+Ferramentas como essas estão lentamente removendo desenvolvedores e criadores que não se preocupam com isso do mercado; Pessoas e empresas que se preocupam com mobile-first só farão ferramentas assim evoluir e surgir novas, sempre com o foco no querido usuário. A receita não é perfeita e sempre haverá espaço para melhorar esse conceito e também essas ferramentas, esperamos que você também se preocupe com a maneira que o usuário acessa seu conteúdo.
