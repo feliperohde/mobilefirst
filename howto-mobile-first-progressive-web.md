@@ -2,7 +2,7 @@
 
 O desenvolvimento mobile first ainda é motivo de pesadelos para designers e desenvolvedores; Para designers porque pensam que terão que fazer um brainstorm totalmente diferente ou que perderão parte da criação por não pensar em telas maiores e para desenvolvedor por pensar em como vai desenvolver tudo aquilo do desktop para o celular.
 
-A criação e desenvolvimento mobile-first é basicamente criar coisas de maneira progressiva ao invés de adaptar toda a parafernália de desktops para celulares, isso sim seria doloroso, não tem haver com ignorar telas maiores ou migrar features desenvolvidas para elas, e sim pensar nas telas maiores depois.
+A criação e desenvolvimento mobile-first é basicamente criar coisas de maneira progressiva em vez de adaptar toda a parafernália de desktops para celulares, isso sim seria doloroso, não tem a ver com ignorar telas maiores ou migrar features desenvolvidas para elas, e sim pensar nas telas maiores depois.
 
 Ao final deste texto teremos uma pagina simples, mobile-first responsiva que poderemos ter como base para projetos no futuro, e principalmente, uma página que vamos gostar de acessar no celular.
 
@@ -15,7 +15,7 @@ A tipografia é parte essencial no design e também no desenvolvimento, seu prin
 Lembra-se de quanto acessava sites e mesmo aplicando zoom a fonte permanecia do mesmo tamanho? Hoje esse isso não acontece mais devido a evolução dos browsers.
 
 Ainda há dificuldade em entender as medidas relativas para a tipografia na web, pensa-se as vezes que as medidas relativas são responsáveis por uma ***adaptaçao mágica*** de tamanhos de um device para outro, na verdade não é bem isso; Por exemplo, as vezes um titulo deve ter a proporção de 24px no celular e de 40px no desktop e espera-se que isso aconteça simplesmente por mudar a medida para uma medida proporcional, e acaba gerando decepção pois não é isso que acontece; Se no desktop foi previsto um titulo proporcionalmente maior, devo setar um tamanho maior para o desktop, uma medida relativa não fará a magia, ao menos não toda.
-Medidas relativas, tem haver com o padrão do browser e o zoom, por padrão, os navegadores tem a seguinte **regra: 1em = 12pt = 16px = 100%**, mas nada me impede de mudar isso e setar o font-size padrão do meu browser para 18px.
+Medidas relativas tem a ver com o padrão do browser e o zoom, por padrão, os navegadores tem a seguinte **regra: 1em = 12pt = 16px = 100%**, mas nada me impede de mudar isso e setar o font-size padrão do meu browser para 18px.
 
 E isso é útil pois assim como posso trazer o jornal mais pra perto, na web posso aumentar o tamanho padrão; Dessa forma elementos com medidas relativas respeitarão a nova medida padrão do browser ao contrário de uma medida fixa em px.
 No exemplo abaixo, temos dois títulos com o mesmo tamanho, mas o que acontece se mudarmos o tamanho padrão do browser? no exemplo fazemos isso setando o font-size no html e no body.
@@ -73,7 +73,7 @@ Os arquivos de fonte são outra forma, e para ícones é o preferido no desenvol
 ### Fontfaces
 Já entrou em um site que aparentemente estava vazio, quando de repente, todo o conteúdo aparece; Muitas vezes isso acontece pois o conteúdo que está ali esta usando uma fonte que não é nativa.
 
-Não há problemas em carregar uma fonte para o site, desde que não seja uma dúzia, mas existe problema em não dar fallback para elementos que usam essa nova fonte; A propriedade **font-family** do css permite que inúmeras famílias de fontes seja atribuída a ela, fazendo com que, da direita pra a esquerda o browser tente encontrar a fonte para exibir o conteúdo. Logo um elemento com font-face, principalmente se for um elemento que exibe um conteúdo, um artigo por exemplo, deve ter uma font-family de fallback, para que seja usada enquanto o browser baixa a nova fonte ou mesmo se o browser não conseguir baixar a fonte ou não encontra-la.
+Não há problemas em carregar uma fonte para o site, desde que não seja uma dúzia, mas existe problema em não dar fallback para elementos que usam essa nova fonte; A propriedade **font-family** do css permite que inúmeras famílias de fontes seja atribuída a ela, fazendo com que, da esquerda pra a direita o browser tente encontrar a fonte para exibir o conteúdo. Logo um elemento com font-face, principalmente se for um elemento que exibe um conteúdo, um artigo por exemplo, deve ter uma font-family de fallback, para que seja usada enquanto o browser baixa a nova fonte ou mesmo se o browser não conseguir baixar a fonte ou não encontra-la.
 
 ```css
 font-family: "My awesome font", "Times New Roman", Georgia, Serif;
